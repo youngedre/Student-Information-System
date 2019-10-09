@@ -1,11 +1,11 @@
-[![Build Status](https://travis-ci.com/alperg/project2-starter-auth.svg?branch=master)](https://travis-ci.com/alperg/project2-starter-auth)
+[![Build Status](https://travis-ci.com/alperg/project2-starter-auth.svg?branch=master)](https://travis-ci.com/youngedre/project2.svg?branch=master)
 
 # Project 2 Starter with Auth
 
 A simple starter project with Express, Handlebars, Sequelize, Passport and Local Auth.
 
 ## Live link:
-https://project2-starter-auth.herokuapp.com/
+https://william-project2.herokuapp.com/
 
 ## Requirements:
 
