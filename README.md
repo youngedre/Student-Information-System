@@ -5,7 +5,7 @@
 A simple starter project with Express, Handlebars, Sequelize, Passport and Local Auth.
 
 ## Live link:
-https://project2-starter-auth.herokuapp.com/
+https://william-project2.herokuapp.com/
 
 ## Requirements:
 
