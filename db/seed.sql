@@ -5,3 +5,7 @@ VALUES ("Joe", "Gates", "j@g.co", "$2b$10$afGmlGCU0AGEzZBILPyPWOfSclxjMxKocB8QXv
 
 INSERT INTO Users (firstName, lastName, email, password, isAdmin)
 VALUES ("Jane", "Jobs", "j@j.co", "$2b$10$afGmlGCU0AGEzZBILPyPWOfSclxjMxKocB8QXv8CqhN73IHUUp7Gi", false);
+INSERT INTO Users (firstName, lastName, email, password, isAdmin)
+VALUES ("Faye", "Jobs", "j@j.co", "$2b$10$afGmlGCU0AGEzZBILPyPWOfSclxjMxKocB8QXv8CqhN73IHUUp7Gi", false);
+
+I

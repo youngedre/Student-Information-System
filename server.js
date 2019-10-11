@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
-const morgan = require('morgan');
+const morgan =   require('morgan');
 const passport = require('passport');
 const moment = require('moment');
 const helmet = require('helmet');
