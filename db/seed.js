@@ -13,4 +13,15 @@ module.exports = (db) => {
     password: process.env.USER_PWD,
     isAdmin: false
   });
+  db.Parent.create({
+    firstName: 'Joe',
+    lastName: 'Jobs',
+    email: 'j@j.co',
+    custodyRelation: true,
+    livingWith: true,
+    employer: 'trilogy',
+    city: 'Durham',
+    zipcode: 27707,
+    phoneNumber: '(012)-345-6789'
+  });
 };
