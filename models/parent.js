@@ -1,5 +1,3 @@
-const bcrypt = require('bcrypt');
-
 module.exports = function (sequelize, DataTypes) {
   const Parent = sequelize.define('Parent', {
     id: {
@@ -29,6 +27,10 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false
     },
     employer: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    streetAddress: {
       type: DataTypes.STRING,
       allowNull: false
     },

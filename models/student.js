@@ -14,10 +14,12 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false
     },
     birthDate: {
-      type: DataTypes.DATEONLY
+      type: DataTypes.DATEONLY,
+      allowNull: false
     },
     gender: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false
     },
     ethnicity: {
       type: DataTypes.STRING
@@ -26,13 +28,16 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING
     },
     emergencyContactName: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false
     },
     emergencyContactPhone: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false
     },
     emergencyContactRelation: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false
     },
     doctorName: {
       type: DataTypes.STRING
@@ -47,6 +52,10 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING
     },
     allergies: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+    },
+    allergyDescription: {
       type: DataTypes.STRING
     }
   });
