@@ -22,5 +22,12 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false
     }
   });
+  Approved.associate = (models) => {
+    Approved.belongsToMany(models.Student, {
+      through: 'StudentApprovedPickup',
+      as: 'students',
+      foreignKey: 'approvedPickupId'
+    });
+  };
   return Approved;
 };
