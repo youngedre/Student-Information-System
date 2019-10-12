@@ -47,5 +47,9 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false
     }
   });
+
+  Parent.associate = function (models) {
+    Parent.hasMany(models.Student);
+  };
   return Parent;
 };
