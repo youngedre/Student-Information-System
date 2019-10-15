@@ -59,6 +59,27 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING
     }
   });
+  Student.associate = function (models) {
+    Student.belongsTo(models.Teacher, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+  Student.associate = function (models) {
+    Student.belongsTo(models.Parent, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+  Student.associate = (models) => {
+    Student.belongsToMany(models.Approved, {
+      through: 'StudentApprovedPickup',
+      as: 'approvedPickup',
+      foreignKey: 'studentId'
+    });
+  };
   return Student;
 };
 
