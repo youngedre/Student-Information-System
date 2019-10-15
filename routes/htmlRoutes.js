@@ -10,6 +10,8 @@ module.exports = (db) => {
     }
   });
 
+
+
   // Load profile page
   router.get('/profile', (req, res) => {
     if (req.isAuthenticated()) {
@@ -43,6 +45,20 @@ module.exports = (db) => {
     }
   });
 
+    // Load dashboard page
+    router.get('/login', (req, res) => {
+      if (req.isAuthenticated()) {
+        const user = {
+          user: req.session.passport.user,
+          isloggedin: req.isAuthenticated()
+        };
+        res.render('login', user);
+      } else {
+        res.render('login');
+      }
+    });
+
+
   // Load dashboard page
   router.get('/dashboard', (req, res) => {
     if (req.isAuthenticated()) {
@@ -55,6 +71,7 @@ module.exports = (db) => {
       res.render('dashboard');
     }
   });
+  
 
   // Load example index page
   router.get('/example', function (req, res) {

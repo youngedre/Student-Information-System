@@ -101,6 +101,7 @@ $('#register').on('click', function (event) {
 });
 
 $('#login-modal').on('click', function (event) {
+  window.location.href = '/login';
   event.preventDefault();
   $('#user-info').modal('show');
 });
@@ -128,3 +129,10 @@ $('#login').on('click', function (event) {
     }
   });
 });
+
+$('[data-open-details]').click(function (e) {
+  e.preventDefault();
+  $(this).next().toggleClass('is-active');
+  $(this).toggleClass('is-active');
+});
+
