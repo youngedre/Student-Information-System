@@ -56,6 +56,20 @@ module.exports = (db) => {
     }
   });
 
+   // Load login page
+   router.get('/student', (req, res) => {
+    if (req.isAuthenticated()) {
+      const user = {
+        user: req.session.passport.user,
+        isloggedin: req.isAuthenticated()
+      };
+      res.render('register_student', user);
+    } else {
+      res.render('register_student');
+    }
+  });
+
+
   // Load parent page
   router.get('/parent', (req, res) => {
     if (req.isAuthenticated()) {
