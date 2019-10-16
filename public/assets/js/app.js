@@ -1,3 +1,5 @@
+/* eslint-disable no-var */
+/* eslint-disable prefer-const */
 $('#add-user').on('click', function (event) {
   event.preventDefault();
 
@@ -8,7 +10,7 @@ $('#add-user').on('click', function (event) {
     email: $('#inputEmail').val().trim(),
     password: $('#inputPassword').val().trim()
   };
-  console.log($('#inputUser').val().trim().toLowerCase())
+  console.log($('#inputUser').val().trim().toLowerCase());
 
   if (newAccount.password.length > 0 && newAccount.email.length > 0 && newAccount.password.length > 0 && newAccount.lastName.length > 0 && newAccount.firstName.length > 0) {
     $.ajax({
@@ -136,8 +138,6 @@ $('#login').on('click', function (event) {
       // $('#user-info').modal('hide');
     }
   });
-
-  
 });
 
 /* SIDE NAVIGATION */
@@ -148,7 +148,7 @@ $('[data-open-details]').click(function (e) {
 });
 
 /* SIDE NAVIGATION */
-$("[data-menu-underline-from-center] a").addClass("underline-from-center");
+$('[data-menu-underline-from-center] a').addClass('underline-from-center');
 $('#offCanvasLeft1').foundation();
 
 /* TABS */
@@ -157,44 +157,107 @@ $('#deeplinked-tabs').foundation();
 /* Hidden elements */
 
 $('#my-profile').hide();
-$('#parent-mail').hide(); 
-$('#add-child').hide(); 
-$('#myChildren').hide(); 
-$('#notAvailable').hide(); 
+$('#parent-mail').hide();
+$('#add-child').hide();
+$('#myChildren').hide();
+$('#notAvailable').hide();
 
-$('#addChild').on('click', function(){
+$('#addChild').on('click', function () {
   $('#add-child').show();
-  $('#myChildren').hide();  
+  $('#myChildren').hide();
   $('#my-profile').hide();
   $('#parent-mail').hide();
-})
+});
 
-$('#children').on('click', function(){
-  $('#myChildren').show(); 
+$('#children').on('click', function () {
+  $('#myChildren').show();
   $('#my-profile').hide();
-  $('#parent-mail').hide(); 
-  $('#add-child').hide(); 
-})
+  $('#parent-mail').hide();
+  $('#add-child').hide();
+});
 
-$('#myProfile').on('click', function(){
+$('#myProfile').on('click', function () {
   $('#my-profile').show();
-  $('#parent-mail').hide(); 
-  $('#add-child').hide(); 
-  $('#myChildren').hide(); 
+  $('#parent-mail').hide();
+  $('#add-child').hide();
+  $('#myChildren').hide();
+});
 
-})
-
-$('#parentMail').on('click', function(){
-  $('#parentMail').show(); 
+$('#parentMail').on('click', function () {
+  $('#parentMail').show();
   $('#my-profile').hide();
-  $('#add-child').hide(); 
-  $('#myChildren').hide(); 
-})
+  $('#add-child').hide();
+  $('#myChildren').hide();
+});
 
-$('#parentMail').on('click', function() {
-  $('#notAvailable').show(); 
-        setTimeout(function(){
-        $('#notAvailable').fadeOut('slow'); 
-      }, 2000)
+$('#parentMail').on('click', function () {
+  $('#notAvailable').show();
+  setTimeout(function () {
+    $('#notAvailable').fadeOut('slow');
+  }, 2000);
+});
 
+// Functionality to add a new student
+$('#add-new-student').on('click', function () {
+  // Need to convert the allergies option to boolean
+  if ($('#confirm-allergies') === 'yes') {
+    var allergies = true;
+  } else {
+    // eslint-disable-next-line no-redeclare
+    var allergies = false;
+  };
+
+  // Need to convert the allergy severity based on user selection
+  if ($('#allergies') === 'Life-Threatening') {
+    var allergySeverity = 'Life-Threatening';
+  } else if ($('#allergies') === 'Severe') {
+    // eslint-disable-next-line no-redeclare
+    var allergySeverity = 'Severe';
+  } else {
+    // eslint-disable-next-line no-redeclare
+    var allergySeverity = 'Moderate';
+  };
+
+  // Create an object with all of the new student data that will be exported to database
+  var newStudentData = {
+    firstName: $('#firstName').val().trim(),
+    lastName: $('#lastName').val().trim(),
+    birthDate: $('#birthDate').val().trim(),
+    gender: $('#gender').val().trim(),
+    ethnicity: $('#ethnicity').val().trim(),
+    primaryLanguage: $('#language').val().trim(),
+    emergencyContactName: $('#emergencyContactName').val().trim(),
+    emergencyContactPhone: $('#emergencyContactPhone').val().trim(),
+    emergencyContactRelation: $('#emergencyContactRelation').val().trim(),
+    doctorName: $('#doctorName').val().trim(),
+    doctorPhone: $('#doctorPhone').val().trim(),
+    dentistName: $('#dentistName').val().trim(),
+    dentistPhone: $('#dentistPhone').val().trim(),
+    allergies: allergies,
+    allergyDescription: $('#allergyDescription').val().trim(),
+    allergySeverity: allergySeverity,
+    notes: $('#notes').val().trim(),
+    TeacherId: Math.floor(Math.random() * 15) + 1
+  };
+  // For testing purposes:
+  console.log(newStudentData);
+
+  // POST request to add new student data to the database
+  $.ajax({
+    type: 'POST',
+    url: '/api/newStudent',
+    data: newStudentData
+  }).then(function () {
+    console.log('New Student Added');
+  });
+});
+
+$('#children').on('click', function () {
+  console.log('Inside click event - children tab');
+  $.ajax({
+    type: 'GET',
+    url: '/api/existingStudent'
+  }).then(function (data) {
+    console.log(data);
+  });
 });
