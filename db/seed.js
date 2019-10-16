@@ -10,14 +10,16 @@ module.exports = (db) => {
     lastName: 'Gates',
     email: 'j@g.co',
     password: process.env.ADMIN_USER_PWD,
-    isAdmin: true
+    isAdmin: true,
+    parentTeacher: 'teacher'
   });
   db.User.create({
     firstName: 'Jane',
     lastName: 'Jobs',
     email: 'j@j.co',
     password: process.env.USER_PWD,
-    isAdmin: false
+    isAdmin: false,
+    parentTeacher: 'parent'
   });
   db.Parent.bulkCreate(parentDataJSON);
   db.Approved.bulkCreate(approvedDataJSON);

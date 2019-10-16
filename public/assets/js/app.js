@@ -4,9 +4,11 @@ $('#add-user').on('click', function (event) {
   const newAccount = {
     firstName: $('#inputFirst').val().trim(),
     lastName: $('#inputLast').val().trim(),
+    parentTeacher: $('#inputUser').val().trim().toLowerCase(),
     email: $('#inputEmail').val().trim(),
     password: $('#inputPassword').val().trim()
   };
+  console.log($('#inputUser').val().trim().toLowerCase())
 
   if (newAccount.password.length > 0 && newAccount.email.length > 0 && newAccount.password.length > 0 && newAccount.lastName.length > 0 && newAccount.firstName.length > 0) {
     $.ajax({
@@ -14,12 +16,12 @@ $('#add-user').on('click', function (event) {
       url: '/api/register',
       data: newAccount
     }).then(() => {
-      if ($("#inputUser").val().trim().toLowerCase() === "parent") {
+      if ($('#inputUser').val().trim().toLowerCase() === 'parent') {
         window.location.href = '/parent';
-      } else if ($("#inputUser").val().trim().toLowerCase() === "teacher") {
+      } else if ($('#inputUser').val().trim().toLowerCase() === 'teacher') {
         window.location.href = '/teacher';
       } else {
-        alert("Please enter either parent or teacher!"); 
+        alert('Please enter either parent or teacher!');
       }
     });
   } else {
@@ -103,7 +105,7 @@ $('#confirm-delete').on('click', function (event) {
 
 $('#register').on('click', function (event) {
   event.preventDefault();
-  window.location.href = '/register';  
+  window.location.href = '/register';
 });
 
 $('#login-modal').on('click', function (event) {
@@ -134,6 +136,8 @@ $('#login').on('click', function (event) {
       // $('#user-info').modal('hide');
     }
   });
+
+  
 });
 
 /* SIDE NAVIGATION */

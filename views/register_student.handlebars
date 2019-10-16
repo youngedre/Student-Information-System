@@ -10,7 +10,12 @@
 
       <h3 id="err-msg"></h3>
 
+
+
       <form id= "create-form">
+
+        {{!-- Student Information --}}
+
         <div class="form-row">
           <div class="form-group col-md-12">
             <label for="studentFirstName">First Name</label>
@@ -53,6 +58,9 @@
           </div>
         </div>
 
+
+        {{!-- Emergency Contact Information --}}
+
         <div class="form-row">
           <div class="form-group col-md-12">
             <label for="emergencyContactName">Emergency Contact Name</label>
@@ -73,6 +81,9 @@
             <input type="text" class="form-control" id="emergencyContactRelation" placeholder="Grandparent">
           </div>
         </div>
+
+
+        {{!-- Medical Information --}}
 
         <div class="form-row">
           <div class="form-group col-md-12">
@@ -108,6 +119,9 @@
             <input type="text" class="form-control" id="allergyDescription" placeholder="Peanuts">
           </div>
         </div>
+
+
+        {{!-- Parent Information --}}
 
         <div class="form-row">
           <div class="form-group col-md-12">
@@ -186,31 +200,40 @@
           </div>
         </div>
 
+
+        {{!-- Approved Pickup Info --}}
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="parentFirstName">Your First Name</label>
-            <input type="text" class="form-control" id="parentFirstName" placeholder="John">
+            <label for="pickupFirstName">Pickup First Name</label>
+            <input type="text" class="form-control" id="pickupFirstName" placeholder="John">
+
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="parentLastName">Your Last Name</label>
-            <input type="text" class="form-control" id="studentLastName" placeholder="Doe">
+
+            <label for="pickupLastName">Your Last Name</label>
+            <input type="text" class="form-control" id="pickuptLastName" placeholder="Doe">
+
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="parentEmail">Email</label>
-            <input type="text" class="form-control" id="parentEmail" placeholder="me@yahoo.com">
+
+            <label for="pickupPhone">Phone</label>
+            <input type="text" class="form-control" id="pickupPhone" placeholder="(919) 999-9999">
+
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
             <label for="custodyRelation">Relationship</label>
-            <input type="text" class="form-control" id="custodyRelation" placeholder="Mother / Father / Grandparent">
+
+            <input type="text" class="form-control" id="custodyRelation" placeholder="Babysitter / Grandparent">
+
           </div>
         </div>
 
