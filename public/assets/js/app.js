@@ -204,3 +204,14 @@ $('#children').on('click', function () {
     console.log(data);
   });
 });
+
+/* SIDE NAVIGATION */
+$('[data-open-details]').click(function (e) {
+  e.preventDefault();
+  $(this).next().toggleClass('is-active');
+  $(this).toggleClass('is-active');
+});
+
+/* SIDE NAVIGATION */
+$('[data-menu-underline-from-center] a').addClass('underline-from-center');
+$('#offCanvasLeft1').foundation();

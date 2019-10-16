@@ -1,27 +1,28 @@
 <section id="myChildren" style="background-color: #FFFDF5"> 
-    <div class="content ">
-        <div class="grid-container">
-<table id="student-data" class="table-expand">
-    <thead>
-      <tr class="table-expand-row">
-        <th width="200">Children</th>
-        <th>Teachers</th>
-         <th>Teacher Contact</th>
-        <th width="150">Update Profile</th>
-      </tr>
-    </thead>
-    <tbody>
+  <div class="content ">
+    <div class="grid-container">
       
-      {{#each studentData}}
+      <table id="student-data" class="table-expand">
+        <thead>
+          <tr class="table-expand-row">
+            <th width="200">Children</th>
+            <th>Teachers</th>
+            <th>Teacher Contact</th>
+            <th width="150">Update Profile</th>
+          </tr>
+        </thead>
 
-        <tr class="table-expand-row" data-open-details id="existingStudentData">
-          <td>{{firstName}} {{lastName}}</td>
-          <td>Teacher's Name</td>
-          <td class="text-right">Teacher's Contact</td>
-          <td><span class="expand-icon">Click to Update</span></td>
-        </tr>
+        <tbody>
+          {{#each studentData}}
 
-      {{/each}}
+          <tr class="table-expand-row" data-open-details id="existingStudentData">
+            <td>{{firstName}} {{lastName}}</td>
+            <td>Teacher's Name</td>
+            <td class="text-right">Teacher's Contact</td>
+            <td><span class="expand-icon">Click to Update</span></td>
+          </tr>
+
+       
 
       <tr class="table-expand-row-content">
         <td colspan="8" class="table-expand-row-nested">
@@ -41,7 +42,7 @@
         <div class="form-row">
           <div class="form-group col-md-12">
             <label for="studentFirstName">First Name</label>
-            <input type="text" class="form-control" id="studentFirstName" placeholder="John">
+            <input type="text" class="form-control" id="studentFirstName" value="{{firstName}}">
           </div>
         </div>
 
@@ -190,7 +191,9 @@
 </div>
         </td>
       </tr>
+         {{/each}}
     </tbody>
+    
   </table> <!-- End of table -->
     </div>
   </div>
