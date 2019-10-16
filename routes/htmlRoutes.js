@@ -58,6 +58,31 @@ module.exports = (db) => {
       }
     });
 
+    // Load dashboard page
+    router.get('/parent', (req, res) => {
+      if (req.isAuthenticated()) {
+        const user = {
+          user: req.session.passport.user,
+          isloggedin: req.isAuthenticated()
+        };
+        res.render('parent_profile', user);
+      } else {
+        res.render('parent_profile');
+      }
+    });
+
+    router.get('/teacher', (req, res) => {
+      if (req.isAuthenticated()) {
+        const user = {
+          user: req.session.passport.user,
+          isloggedin: req.isAuthenticated()
+        };
+        res.render('teacher_profile', user);
+      } else {
+        res.render('teacher_profile');
+      }
+    });
+
 
   // Load dashboard page
   router.get('/dashboard', (req, res) => {
