@@ -67,11 +67,9 @@ module.exports = function (sequelize, DataTypes) {
     });
   };
   Student.associate = function (models) {
-    Student.belongsTo(models.Parent, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
+    Student.belongsTo(models.Parent,
+      { constraints: false }
+    );
   };
   Student.associate = (models) => {
     Student.belongsToMany(models.Approved, {
