@@ -195,16 +195,43 @@ $('#add-new-student').on('click', function () {
   });
 });
 
-$('#children').on('click', function () {
-  console.log('Inside click event - children tab');
+// Functionality to add a new parent
+$('#add-new-parent').on('click', function () {
+  // Need to convert the living with option to boolean
+  if ($('#livingWith') === 'yes') {
+    var livingWith = true;
+  } else {
+    // eslint-disable-next-line no-redeclare
+    var livingWith = false;
+  };
+
+  // Create an object with all of the new student data that will be exported to database
+  var newParentData = {
+    firstName: $('#parentFirstName').val().trim(),
+    lastName: $('#parentLastName').val().trim(),
+    email: $('#email').val().trim(),
+    phoneNumber: $('#parentPhoneNumber').val().trim(),
+    streetAddress: $('#streetAddress').val().trim(),
+    city: $('#city').val().trim(),
+    state: $('#state').val().trim(),
+    zipcode: $('#zipcode').val().trim(),
+    custodyRelation: $('#custodyRelation').val().trim(),
+    livingWith: livingWith
+  };
+  // For testing purposes:
+  console.log(newParentData);
+
+  // POST request to add new student data to the database
   $.ajax({
-    type: 'GET',
-    url: '/api/existingStudent'
-  }).then(function (data) {
-    console.log(data);
+    type: 'POST',
+    url: '/api/newParent',
+    data: newParentData
+  }).then(function () {
+    console.log('New Parent Added');
   });
 });
 
+<<<<<<< HEAD
 /* SIDE NAVIGATION */
 $('[data-open-details]').click(function (e) {
   e.preventDefault();
@@ -215,3 +242,14 @@ $('[data-open-details]').click(function (e) {
 /* SIDE NAVIGATION */
 $('[data-menu-underline-from-center] a').addClass('underline-from-center');
 $('#offCanvasLeft1').foundation();
+=======
+// $('#children').on('click', function () {
+//   console.log('Inside click event - children tab');
+//   $.ajax({
+//     type: 'GET',
+//     url: '/api/existingStudent'
+//   }).then(function (data) {
+//     console.log(data);
+//   });
+// });
+>>>>>>> 1eee6017eb490bf6e6320ccc4169e19e60a9fcf8

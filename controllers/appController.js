@@ -24,6 +24,12 @@ module.exports = function (db) {
       db.Student.create(req.body).then(function (dbStudent) {
         res.json(dbStudent);
       });
+    },
+    // Create new student entry
+    addNewParent: function (req, res) {
+      db.Parent.create(req.body).then(function (dbParent) {
+        res.json(dbParent);
+      });
     }
 
   };

@@ -25,15 +25,4 @@ module.exports = (db) => {
   db.Approved.bulkCreate(approvedDataJSON);
   db.Teacher.bulkCreate(teacherDataJSON);
   db.Student.bulkCreate(studentDataJSON);
-
-  // Start student data creation
-
-  // Start teacher data creation
-  // db.Teacher.create({
-  //   first_name: 'Fatima',
-  //   last_name: 'Carabana',
-  //   classroom_number: 10,
-  //   phone_number: '(336) 675-0786',
-  //   email: 'fatima@gmail.com'
-  // });
 };
