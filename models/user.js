@@ -25,10 +25,15 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    parentTeacher: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     isAdmin: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     }
+    
   }, {
     timestamps: true,
     hooks: {
