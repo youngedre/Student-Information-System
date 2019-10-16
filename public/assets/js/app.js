@@ -161,6 +161,7 @@ $('#parent-mail').hide();
 $('#add-child').hide(); 
 $('#myChildren').hide(); 
 $('#notAvailable').hide(); 
+$('#register-accounts').hide();
 
 $('#addChild').on('click', function(){
   $('#add-child').show();
@@ -198,3 +199,5 @@ $('#parentMail').on('click', function() {
       }, 2000)
 
 });
+
+// $('#register-accounts').hide();
