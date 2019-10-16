@@ -56,8 +56,8 @@ module.exports = (db) => {
     }
   });
 
-   // Load login page
-   router.get('/student', (req, res) => {
+  // Load login page
+  router.get('/student', (req, res) => {
     if (req.isAuthenticated()) {
       const user = {
         user: req.session.passport.user,
@@ -68,7 +68,6 @@ module.exports = (db) => {
       res.render('register_student');
     }
   });
-
 
   // Load parent page
   router.get('/parent', (req, res) => {
