@@ -12,7 +12,9 @@ $('[data-open-details]').click(function (e) {
   
   /* TABS */
   $('#deeplinked-tabs').foundation();
-  
+
+  $('#parent-tabs').foundation();
+  $('#my-children-tabs').foundation();
   /* Hidden elements */
   
   // $('#my-profile').hide();
@@ -21,6 +23,7 @@ $('[data-open-details]').click(function (e) {
   $('#myChildren').hide(); 
   $('#notAvailable').hide(); 
   $('#register-accounts').hide();
+  $('#add-parent').hide();
   
   $('#addChild').on('click', function () {
     $('#add-child').show();
@@ -57,3 +60,6 @@ $('[data-open-details]').click(function (e) {
     }, 2000);
   });
   
+  $('#myProfile').on('click', function(){
+    $('#add-parent').show();
+  })
