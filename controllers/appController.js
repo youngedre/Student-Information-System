@@ -24,23 +24,6 @@ module.exports = function (db) {
       db.Student.create(req.body).then(function (dbStudent) {
         res.json(dbStudent);
       });
-    },
-
-    // ************ This needs to be updated with req.params.id for parent
-    viewExistingStudent: function (req, res) {
-      console.log('Inside viewExistingStudent - appController');
-      if (req.params.id) {
-        var id = req.params.id;
-      } else {
-        id = 32;
-      }
-      db.Student.findAll({
-        where: {
-          id: id
-        }
-      }).then(function (dbStudent) {
-        res.json(dbStudent);
-      });
     }
 
   };
