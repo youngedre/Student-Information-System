@@ -145,3 +145,6 @@ $('[data-open-details]').click(function (e) {
   $(this).next().toggleClass('is-active');
   $(this).toggleClass('is-active');
 });
+
+$("[data-menu-underline-from-center] a").addClass("underline-from-center");
+
