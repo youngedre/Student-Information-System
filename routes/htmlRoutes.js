@@ -1,3 +1,4 @@
+/* eslint-disable no-var */
 const router = require('express').Router();
 
 module.exports = (db) => {
@@ -71,15 +72,34 @@ module.exports = (db) => {
 
   // Load parent page
   router.get('/parent', (req, res) => {
-    if (req.isAuthenticated()) {
-      const user = {
-        user: req.session.passport.user,
-        isloggedin: req.isAuthenticated()
-      };
-      res.render('parent_profile', user);
+    // if (req.isAuthenticated()) {
+    //   const user = {
+    //     user: req.session.passport.user,
+    //     isloggedin: req.isAuthenticated()
+    //   };
+    if (req.params.id) {
+      var id = req.params.id;
     } else {
-      res.render('parent_profile');
+      id = 32;
     }
+    db.Student.findAll({
+      where: {
+        ParentId: id
+      }
+      // ,
+      // include: [db.Teacher]
+      // as: 'Teacher',
+      // where: { id: db.Student.TeacherId }
+    }).then(function (dbStudent) {
+      // console.log(dbStudent);
+      res.render('parent_profile', {
+        studentData: dbStudent
+      });
+      // res.json(dbStudent);
+    });
+    // } else {
+    //   res.render('register_student');
+    // }
   });
 
   // Load teacher page
@@ -107,6 +127,21 @@ module.exports = (db) => {
       res.render('dashboard');
     }
   });
+
+  // router.get('/parent#panel4d', function (req, res) {
+  //   if (req.params.id) {
+  //     var id = req.params.id;
+  //   } else {
+  //     id = 32;
+  //   }
+  //   db.Student.findAll({
+  //     where: {
+  //       id: id
+  //     }
+  //   }).then(function (dbStudent) {
+  //     // res.json(dbStudent);
+  //     res.render('/parent#panel4d', dbStudent);
+  // });
 
   // Load example index page
   router.get('/example', function (req, res) {

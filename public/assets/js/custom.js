@@ -12,15 +12,18 @@ $('[data-open-details]').click(function (e) {
   
   /* TABS */
   $('#deeplinked-tabs').foundation();
-  
+
+  $('#parent-tabs').foundation();
+  $('#my-children-tabs').foundation();
   /* Hidden elements */
   
-  // $('#my-profile').hide();
+//   $('#my-profile').hide();
   $('#parent-mail').hide(); 
   $('#add-child').hide(); 
   $('#myChildren').hide(); 
   $('#notAvailable').hide(); 
   $('#register-accounts').hide();
+  $('#add-parent').hide();
   
   $('#addChild').on('click', function () {
     $('#add-child').show();
@@ -57,6 +60,7 @@ $('[data-open-details]').click(function (e) {
     }, 2000);
   });
 
+
   $('#parent').on('click', function () {
     $('#register-accounts').show();
     $('#accountType').hide();
@@ -69,3 +73,31 @@ $('[data-open-details]').click(function (e) {
 
 
   
+  $('#myProfile').on('click', function(){
+    $('#add-parent').show();
+  })
+
+  // shows and hides filtered items
+$(".filter-simple-button").click(function() {
+    var value = $(this).attr('data-filter');
+    if(value === "all") {
+      $('.filter-simple-item').show('1000');
+    } else {
+      $(".filter-simple-item").not('.'+value).hide('3000');
+      $('.filter-simple-item').filter('.'+value).show('3000');
+    }
+  });
+  
+  // changes active class on filter buttons
+  $('.filter-simple-button').click(function () {
+    $(this).siblings().removeClass('is-active');
+    $(this).addClass('is-active');
+  });
+  
+  $('#teacherProfile').on('click', function () {
+    $('#parentMail').show();
+    $('#teacher-profile').hide();
+    $('#add-child').hide();
+    $('#myChildren').hide();
+  });
+

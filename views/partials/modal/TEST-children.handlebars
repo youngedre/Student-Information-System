@@ -1,64 +1,95 @@
-<section id="add-parent" style="background-color: #FFFDF5"> 
-<div class="content">
-  <div class="grid-container">
-<ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="parent-tabs">
-  <li class="tabs-title"><a href="#parent1" aria-selected="true" class = "is-active">Tab 1</a></li>
-  <li class="tabs-title"><a href="#parent2">Tab 2</a></li>
-  <li class="tabs-title"><a href="#parent3">Tab 3</a></li>
-  <li class="tabs-title"><a href="#parent4">Tab 4</a></li>
-</ul>
+<section id="myChildren" style="background-color: #FFFDF5"> 
+    <div class="content ">
+        <div class="grid-container">
+
+<table id="student-data" class="table-expand">
+    <thead>
+      <tr class="table-expand-row">
+        <th width="200">Children</th>
+        <th>Teachers</th>
+         <th>Teacher Contact</th>
+        <th width="150">Update Profile</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each studentData}}
+
+        <tr class="table-expand-row" data-open-details id="existingStudentData">
+          <td>{{firstName}} {{lastName}}</td>
+          <td>Teacher's Name</td>
+          <td class="text-right">Teacher's Contact</td>
+          <td><span class="expand-icon">Click to Update</span></td>
+        </tr>
+
+      {{/each}}
 
 
-<div class="tabs-content" data-tabs-content="parent-tabs">
+
+      <tr class="table-expand-row-content">
+        <td colspan="8" class="table-expand-row-nested">
+            <div class="grid-container">
+        <ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="my-children-tabs">
+          <li class="tabs-title is-active"><a href="#panel5d" aria-selected="true">Tab 1</a></li>
+          <li class="tabs-title"><a href="#panel6d">Tab 2</a></li>
+          <li class="tabs-title"><a href="#panel7d">Tab 3</a></li>
+          <li class="tabs-title"><a href="#panel8d">Tab 4</a></li>
+        </ul>
+
+
+<div class="tabs-content" data-tabs-content="my-children-tabs">
   <!-- Section 1: panel 1 -->
-  <div class="tabs-panel is-active" id="parent1">
+  <div class="tabs-panel is-active" id="panel5d">
      <form id= "create-form">
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" placeholder="John">
+            <label for="studentFirstName">First Name</label>
+            <input type="text" class="form-control" id="studentFirstName" placeholder="John">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Doe">
+            <label for="studentLastName">Last Name</label>
+            <input type="text" class="form-control" id="studentLastName" placeholder="Doe">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="birthDate">Birthdate (Format: YYYY-MM-DD)</label>
-            <input type="text" class="form-control" id="birthDate" placeholder="2015-01-17">
+            <label for="studentBirthDate">Birthdate (Format: YYYY-MM-DD)</label>
+            <input type="text" class="form-control" id="studentBirthDate" placeholder="2015-01-17">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="gender">Gender</label>
-            <input type="text" class="form-control" id="gender" placeholder="Male or Female">
+            <label for="studentGender">Gender</label>
+            <input type="text" class="form-control" id="studentGender" placeholder="Male or Female">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="ethnicity">Ethnicity</label>
-            <input type="text" class="form-control" id="ethnicity" placeholder="Hispanic or non-Hispanic">
+            <label for="studentEthnicity">Ethnicity</label>
+            <input type="text" class="form-control" id="studentEthnicity" placeholder="Hispanic or non-Hispanic">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="language">What language do you speak at home?</label>
-            <input type="text" class="form-control" id="language" placeholder="English / Spanish">
+            <label for="studentLanguage">What language do you speak at home?</label>
+            <input type="text" class="form-control" id="studentLanguage" placeholder="English / Spanish">
           </div>
         </div>
-       <a type="submit" id="new-student-main" class="button expanded">Next</a>
+        <div class="form-row">
+          <label for="exampleFileUpload" class="button">Upload File</label>
+          <input type="file" id="exampleFileUpload" class="show-for-sr">
+          </div>
+       <a type="submit" id="add-user" class="button expanded">Update</a>
     </form>
   </div>
   <!-- Section 2: panel 2 -->
-  <div class="tabs-panel" id="parent2">
+  <div class="tabs-panel" id="panel6d">
     <form>
     <div class="form-row">
           <div class="form-group col-md-12">
@@ -107,11 +138,11 @@
             <input type="text" class="form-control" id="dentistPhone" placeholder="(919) 999-9999">
           </div>
         </div>
-        <a type="submit" id="new-student-medical-info" class="button expanded">Next</a>
+        <a type="submit" id="add-user" class="button expanded">Update</a>
     </form>
    </div>
   <!-- Section 3: panel 3 -->
-  <div class="tabs-panel" id="parent3">
+  <div class="tabs-panel" id="panel7d">
     <form>
      <div class="form-row">
           <div class="form-group col-md-12">
@@ -129,17 +160,17 @@
         </div>
         <div class="grid-x grid-padding-x">
           <fieldset>
-            <legend>If you answered yes, how severe are your child's allergies?</legend>
-            <input type="radio" name="allergies" value="Life-Threatening" id="Life-Threatening"><label for="Life-Threatening">life Threatening</label>
+            <legend>If you answered yes, how severe are your child's allergies? (1 = severe 3 = mild)</legend>
+            <input type="radio" name="allergies" value="life-threatening" id="life-threatening"><label for="life-threatening">life Threatening</label>
             <input type="radio" name="allergies" value="Blue" id="Severe"><label for="Severe">Severe</label>
             <input type="radio" name="allergies" value="Yellow" id="Moderate"><label for="Moderate">Moderate</label>
           </fieldset>
         </div>
-         <a type="submit" id="new-student-allergy" class="button expanded">Next</a>
+         <a type="submit" id="add-user" class="button expanded">Update</a>
     </form>
   </div>
   <!-- Section 4: 4 --> 
-  <div class="tabs-panel" id="parent4">
+  <div class="tabs-panel" id="panel8d">
      <form>
      <div class="form-row">
           <div class="form-group col-md-12">
@@ -147,17 +178,21 @@
             <div class="large-12 columns">
               <fieldset>
                 <legend>Additional notes for the teacher. </legend>
-                <textarea placeholder="small-12.columns" id="notes"></textarea>
+                <textarea placeholder="small-12.columns"></textarea>
               </fieldset>
           </div>
           </div>
         </div>
-         <a type="submit" id="add-new-student" class="button expanded">Submit Information</a>
+         <a type="submit" id="add-user" class="button expanded">Update</a>
     </form>  
     </div>
 </div>
 
 </div>
-</div>
-
+        </td>
+      </tr>
+    </tbody>
+  </table> <!-- End of table -->
+    </div>
+  </div>
 </section>
