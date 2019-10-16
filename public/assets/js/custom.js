@@ -59,6 +59,19 @@ $('[data-open-details]').click(function (e) {
       $('#notAvailable').fadeOut('slow');
     }, 2000);
   });
+
+
+  $('#parent').on('click', function () {
+    $('#register-accounts').show();
+    $('#accountType').hide();
+  });
+
+  $('#teacher').on('click', function () {
+    $('#register-accounts').show();
+    $('#accountType').hide();
+  });
+
+
   
   $('#myProfile').on('click', function(){
     $('#add-parent').show();
@@ -87,3 +100,4 @@ $(".filter-simple-button").click(function() {
     $('#add-child').hide();
     $('#myChildren').hide();
   });
+
