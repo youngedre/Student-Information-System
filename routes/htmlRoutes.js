@@ -9,9 +9,6 @@ module.exports = (db) => {
       res.render('register');
     }
   });
-
-
-
   // Load profile page
   router.get('/profile', (req, res) => {
     if (req.isAuthenticated()) {
