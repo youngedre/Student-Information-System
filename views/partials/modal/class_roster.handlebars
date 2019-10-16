@@ -1,25 +1,25 @@
-<section id="myChildren" style="background-color: #FFFDF5"> 
+<section id="myClass" style="background-color: #FFFDF5"> 
   <div class="content ">
     <div class="grid-container">
       
       <table id="student-data" class="table-expand">
         <thead>
           <tr class="table-expand-row">
-            <th width="200">Children</th>
-            <th>Teachers</th>
-            <th>Teacher Contact</th>
-            <th width="150">Update Profile</th>
+            <th width="200">Child's Name</th>
+            <th>Parent's Name</th>
+            <th>Parent's Contact</th>
+            <th width="150">Expand Data</th>
           </tr>
         </thead>
 
         <tbody>
-          {{#each studentData}}
+          {{!-- {{#each}} --}}
 
           <tr class="table-expand-row" data-open-details id="existingStudentData">
-            <td>{{firstName}} {{lastName}}</td>
-            <td>Teacher's Name</td>
-            <td class="text-right">Teacher's Contact</td>
-            <td><span class="expand-icon">Click to Update</span></td>
+            <td>Child's Name</td>
+            <td>Parent's Name</td>
+            <td class="text-right">Parent's contact</td>
+            <td><span class="expand-icon">Click to View</span></td>
           </tr>
 
        
@@ -191,7 +191,7 @@
 </div>
         </td>
       </tr>
-         {{/each}}
+         {{!-- {{/each}} --}}
     </tbody>
     
   </table> <!-- End of table -->

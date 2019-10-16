@@ -231,6 +231,18 @@ $('#add-new-parent').on('click', function () {
   });
 });
 
+<<<<<<< HEAD
+/* SIDE NAVIGATION */
+$('[data-open-details]').click(function (e) {
+  e.preventDefault();
+  $(this).next().toggleClass('is-active');
+  $(this).toggleClass('is-active');
+});
+
+/* SIDE NAVIGATION */
+$('[data-menu-underline-from-center] a').addClass('underline-from-center');
+$('#offCanvasLeft1').foundation();
+=======
 // $('#children').on('click', function () {
 //   console.log('Inside click event - children tab');
 //   $.ajax({
@@ -240,3 +252,4 @@ $('#add-new-parent').on('click', function () {
 //     console.log(data);
 //   });
 // });
+>>>>>>> 1eee6017eb490bf6e6320ccc4169e19e60a9fcf8

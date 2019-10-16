@@ -1,15 +1,4 @@
 
-/* SIDE NAVIGATION */
-$('[data-open-details]').click(function (e) {
-    e.preventDefault();
-    $(this).next().toggleClass('is-active');
-    $(this).toggleClass('is-active');
-  });
-  
-  /* SIDE NAVIGATION */
-  $('[data-menu-underline-from-center] a').addClass('underline-from-center');
-  $('#offCanvasLeft1').foundation();
-  
   /* TABS */
   $('#deeplinked-tabs').foundation();
 
@@ -17,11 +6,12 @@ $('[data-open-details]').click(function (e) {
   $('#my-children-tabs').foundation();
   /* Hidden elements */
   
-//   $('#my-profile').hide();
+ 
+  $('#add-parent').show();
   $('#parent-mail').hide(); 
   $('#add-child').hide(); 
   $('#myChildren').hide(); 
-  $('#notAvailable').hide(); 
+  $('.notAvailable').hide(); 
   $('#register-accounts').hide();
   $('#add-parent').hide();
   
@@ -30,6 +20,7 @@ $('[data-open-details]').click(function (e) {
     $('#myChildren').hide();
     $('#my-profile').hide();
     $('#parent-mail').hide();
+    $('#my-profile').hide();
   });
   
   $('#children').on('click', function () {
@@ -37,13 +28,15 @@ $('[data-open-details]').click(function (e) {
     $('#my-profile').hide();
     $('#parent-mail').hide();
     $('#add-child').hide();
+    $('#my-profile').hide();
   });
   
   $('#myProfile').on('click', function () {
-    $('#my-profile').show();
+    $('#add-parent').show();
     $('#parent-mail').hide();
     $('#add-child').hide();
     $('#myChildren').hide();
+    $('#my-profile').hide();
   });
   
   $('#parentMail').on('click', function () {
@@ -54,7 +47,8 @@ $('[data-open-details]').click(function (e) {
   });
   
   $('#parentMail').on('click', function () {
-    $('#notAvailable').show();
+    $('.notAvailable').show();
+    $('#my-profile').show();
     setTimeout(function () {
       $('#notAvailable').fadeOut('slow');
     }, 2000);
@@ -76,28 +70,4 @@ $('[data-open-details]').click(function (e) {
   $('#myProfile').on('click', function(){
     $('#add-parent').show();
   })
-
-  // shows and hides filtered items
-$(".filter-simple-button").click(function() {
-    var value = $(this).attr('data-filter');
-    if(value === "all") {
-      $('.filter-simple-item').show('1000');
-    } else {
-      $(".filter-simple-item").not('.'+value).hide('3000');
-      $('.filter-simple-item').filter('.'+value).show('3000');
-    }
-  });
-  
-  // changes active class on filter buttons
-  $('.filter-simple-button').click(function () {
-    $(this).siblings().removeClass('is-active');
-    $(this).addClass('is-active');
-  });
-  
-  $('#teacherProfile').on('click', function () {
-    $('#parentMail').show();
-    $('#teacher-profile').hide();
-    $('#add-child').hide();
-    $('#myChildren').hide();
-  });
 
