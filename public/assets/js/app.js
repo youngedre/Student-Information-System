@@ -103,7 +103,7 @@ $('#register').on('click', function (event) {
 $('#login-modal').on('click', function (event) {
   window.location.href = '/login';
   event.preventDefault();
-  $('#user-info').modal('show');
+  // $('#user-info').modal('show');
 });
 
 $('#go-home').on('click', function (event) {
@@ -125,7 +125,7 @@ $('#login').on('click', function (event) {
       $(document.location).attr('href', '/dashboard');
     } else {
       $('#login-err-msg').empty('').text(result.error);
-      $('#user-info').modal('hide');
+      // $('#user-info').modal('hide');
     }
   });
 });
