@@ -20,9 +20,9 @@ module.exports = (db) => {
     isAdmin: false
   });
   db.Parent.bulkCreate(parentDataJSON);
-  db.Student.bulkCreate(studentDataJSON);
   db.Approved.bulkCreate(approvedDataJSON);
   db.Teacher.bulkCreate(teacherDataJSON);
+  db.Student.bulkCreate(studentDataJSON);
 
   // Start student data creation
 
