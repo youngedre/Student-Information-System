@@ -56,4 +56,16 @@ $('[data-open-details]').click(function (e) {
       $('#notAvailable').fadeOut('slow');
     }, 2000);
   });
+
+  $('#parent').on('click', function () {
+    $('#register-accounts').show();
+    $('#accountType').hide();
+  });
+
+  $('#teacher').on('click', function () {
+    $('#register-accounts').show();
+    $('#accountType').hide();
+  });
+
+
   
