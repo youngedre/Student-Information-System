@@ -1,17 +1,17 @@
 <section id="add-parent" style="background-color: #FFFDF5"> 
 <div class="content">
   <div class="grid-container">
-<ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="deeplinked-tabs">
-  <li class="tabs-title"><a href="#panel1d" aria-selected="true" class = "is-active">Tab 1</a></li>
-  <li class="tabs-title"><a href="#panel2d">Tab 2</a></li>
-  <li class="tabs-title"><a href="#panel3d">Tab 3</a></li>
-  <li class="tabs-title"><a href="#panel4d">Tab 4</a></li>
+<ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="parent-tabs">
+  <li class="tabs-title"><a href="#parent1" aria-selected="true" class = "is-active">Tab 1</a></li>
+  <li class="tabs-title"><a href="#parent2">Tab 2</a></li>
+  <li class="tabs-title"><a href="#parent3">Tab 3</a></li>
+  <li class="tabs-title"><a href="#parent4">Tab 4</a></li>
 </ul>
 
 
-<div class="tabs-content" data-tabs-content="deeplinked-tabs">
+<div class="tabs-content" data-tabs-content="parent-tabs">
   <!-- Section 1: panel 1 -->
-  <div class="tabs-panel is-active" id="panel1d">
+  <div class="tabs-panel is-active" id="parent1">
      <form id= "create-form">
         <div class="form-row">
           <div class="form-group col-md-12">
@@ -54,15 +54,11 @@
             <input type="text" class="form-control" id="language" placeholder="English / Spanish">
           </div>
         </div>
-        <div class="form-row">
-          <label for="exampleFileUpload" class="button">Upload File</label>
-          <input type="file" id="exampleFileUpload" class="show-for-sr">
-          </div>
        <a type="submit" id="new-student-main" class="button expanded">Next</a>
     </form>
   </div>
   <!-- Section 2: panel 2 -->
-  <div class="tabs-panel" id="panel2d">
+  <div class="tabs-panel" id="parent2">
     <form>
     <div class="form-row">
           <div class="form-group col-md-12">
@@ -115,7 +111,7 @@
     </form>
    </div>
   <!-- Section 3: panel 3 -->
-  <div class="tabs-panel" id="panel3d">
+  <div class="tabs-panel" id="parent3">
     <form>
      <div class="form-row">
           <div class="form-group col-md-12">
@@ -143,7 +139,7 @@
     </form>
   </div>
   <!-- Section 4: 4 --> 
-  <div class="tabs-panel" id="panel4d">
+  <div class="tabs-panel" id="parent4">
      <form>
      <div class="form-row">
           <div class="form-group col-md-12">
