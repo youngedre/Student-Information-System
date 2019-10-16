@@ -16,50 +16,50 @@
      <form id= "create-form">
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="studentFirstName">First Name</label>
-            <input type="text" class="form-control" id="studentFirstName" placeholder="John">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="John">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="studentLastName">Last Name</label>
-            <input type="text" class="form-control" id="studentLastName" placeholder="Doe">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Doe">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="studentBirthDate">Birthdate (Format: YYYY-MM-DD)</label>
-            <input type="text" class="form-control" id="studentBirthDate" placeholder="2015-01-17">
+            <label for="birthDate">Birthdate (Format: YYYY-MM-DD)</label>
+            <input type="text" class="form-control" id="birthDate" placeholder="2015-01-17">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="studentGender">Gender</label>
-            <input type="text" class="form-control" id="studentGender" placeholder="Male or Female">
+            <label for="gender">Gender</label>
+            <input type="text" class="form-control" id="gender" placeholder="Male or Female">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="studentEthnicity">Ethnicity</label>
-            <input type="text" class="form-control" id="studentEthnicity" placeholder="Hispanic or non-Hispanic">
+            <label for="ethnicity">Ethnicity</label>
+            <input type="text" class="form-control" id="ethnicity" placeholder="Hispanic or non-Hispanic">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="studentLanguage">What language do you speak at home?</label>
-            <input type="text" class="form-control" id="studentLanguage" placeholder="English / Spanish">
+            <label for="language">What language do you speak at home?</label>
+            <input type="text" class="form-control" id="language" placeholder="English / Spanish">
           </div>
         </div>
         <div class="form-row">
           <label for="exampleFileUpload" class="button">Upload File</label>
           <input type="file" id="exampleFileUpload" class="show-for-sr">
           </div>
-       <a type="submit" id="add-user" class="button expanded">Update</a>
+       <a type="submit" id="new-student-main" class="button expanded">Next</a>
     </form>
   </div>
   <!-- Section 2: panel 2 -->
@@ -112,7 +112,7 @@
             <input type="text" class="form-control" id="dentistPhone" placeholder="(919) 999-9999">
           </div>
         </div>
-        <a type="submit" id="add-user" class="button expanded">Update</a>
+        <a type="submit" id="new-student-medical-info" class="button expanded">Next</a>
     </form>
    </div>
   <!-- Section 3: panel 3 -->
@@ -134,13 +134,13 @@
         </div>
         <div class="grid-x grid-padding-x">
           <fieldset>
-            <legend>If you answered yes, how severe are your child's allergies? (1 = severe 3 = mild)</legend>
-            <input type="radio" name="allergies" value="life-threatening" id="life-threatening"><label for="life-threatening">life Threatening</label>
+            <legend>If you answered yes, how severe are your child's allergies?</legend>
+            <input type="radio" name="allergies" value="Life-Threatening" id="Life-Threatening"><label for="Life-Threatening">life Threatening</label>
             <input type="radio" name="allergies" value="Blue" id="Severe"><label for="Severe">Severe</label>
             <input type="radio" name="allergies" value="Yellow" id="Moderate"><label for="Moderate">Moderate</label>
           </fieldset>
         </div>
-         <a type="submit" id="add-user" class="button expanded">Update</a>
+         <a type="submit" id="new-student-allergy" class="button expanded">Next</a>
     </form>
   </div>
   <!-- Section 4: 4 --> 
@@ -152,12 +152,12 @@
             <div class="large-12 columns">
               <fieldset>
                 <legend>Additional notes for the teacher. </legend>
-                <textarea placeholder="small-12.columns"></textarea>
+                <textarea placeholder="small-12.columns" id="notes"></textarea>
               </fieldset>
           </div>
           </div>
         </div>
-         <a type="submit" id="add-user" class="button expanded">Update</a>
+         <a type="submit" id="add-new-student" class="button expanded">Submit Information</a>
     </form>  
     </div>
 </div>

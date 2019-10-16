@@ -57,6 +57,12 @@ module.exports = function (sequelize, DataTypes) {
     },
     allergyDescription: {
       type: DataTypes.STRING
+    },
+    allergySeverity: {
+      type: DataTypes.STRING
+    },
+    notes: {
+      type: DataTypes.STRING
     }
   });
   Student.associate = function (models) {
