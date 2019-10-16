@@ -14,7 +14,13 @@ $('#add-user').on('click', function (event) {
       url: '/api/register',
       data: newAccount
     }).then(() => {
-      window.location.href = '/';
+      if ($("#inputUser").val().trim().toLowerCase() === "parent") {
+        window.location.href = '/parent';
+      } else if ($("#inputUser").val().trim().toLowerCase() === "teacher") {
+        window.location.href = '/teacher';
+      } else {
+        alert("Please enter either parent or teacher!"); 
+      }
     });
   } else {
     console.log('**Please fill out entire form**');
@@ -97,7 +103,7 @@ $('#confirm-delete').on('click', function (event) {
 
 $('#register').on('click', function (event) {
   event.preventDefault();
-  window.location.href = '/register';
+  window.location.href = '/register';  
 });
 
 $('#login-modal').on('click', function (event) {
