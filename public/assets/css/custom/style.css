@@ -386,7 +386,7 @@ background: #F7CD1C!important;
   }
 }
 
-
+ /*  Nav bar */
 .hover-underline-menu {
   width: 100%;
 }
@@ -421,3 +421,8 @@ background: #F7CD1C!important;
 }
 
 
+/* parent-portal */ 
+
+.header-button {
+  margin-bottom: 0; 
+}
