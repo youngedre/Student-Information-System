@@ -152,7 +152,7 @@ $('#deeplinked-tabs').foundation();
 
 /* Hidden elements */
 
-$('#my-profile').hide();
+// $('#my-profile').hide();
 $('#parent-mail').hide(); 
 $('#add-child').hide(); 
 $('#myChildren').hide(); 
