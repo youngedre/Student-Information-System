@@ -10,8 +10,6 @@ module.exports = (db) => {
     }
   });
 
-
-
   // Load profile page
   router.get('/profile', (req, res) => {
     if (req.isAuthenticated()) {
@@ -32,7 +30,7 @@ module.exports = (db) => {
     }
   });
 
-  // Load dashboard page
+  // Load home page
   router.get('/', (req, res) => {
     if (req.isAuthenticated()) {
       const user = {
@@ -45,44 +43,58 @@ module.exports = (db) => {
     }
   });
 
-    // Load dashboard page
-    router.get('/login', (req, res) => {
-      if (req.isAuthenticated()) {
-        const user = {
-          user: req.session.passport.user,
-          isloggedin: req.isAuthenticated()
-        };
-        res.render('login', user);
-      } else {
-        res.render('login');
-      }
-    });
+  // Load login page
+  router.get('/login', (req, res) => {
+    if (req.isAuthenticated()) {
+      const user = {
+        user: req.session.passport.user,
+        isloggedin: req.isAuthenticated()
+      };
+      res.render('login', user);
+    } else {
+      res.render('login');
+    }
+  });
 
-    // Load dashboard page
-    router.get('/parent', (req, res) => {
-      if (req.isAuthenticated()) {
-        const user = {
-          user: req.session.passport.user,
-          isloggedin: req.isAuthenticated()
-        };
-        res.render('parent_profile', user);
-      } else {
-        res.render('parent_profile');
-      }
-    });
+   // Load login page
+   router.get('/student', (req, res) => {
+    if (req.isAuthenticated()) {
+      const user = {
+        user: req.session.passport.user,
+        isloggedin: req.isAuthenticated()
+      };
+      res.render('register_student', user);
+    } else {
+      res.render('register_student');
+    }
+  });
 
-    router.get('/teacher', (req, res) => {
-      if (req.isAuthenticated()) {
-        const user = {
-          user: req.session.passport.user,
-          isloggedin: req.isAuthenticated()
-        };
-        res.render('teacher_profile', user);
-      } else {
-        res.render('teacher_profile');
-      }
-    });
 
+  // Load parent page
+  router.get('/parent', (req, res) => {
+    if (req.isAuthenticated()) {
+      const user = {
+        user: req.session.passport.user,
+        isloggedin: req.isAuthenticated()
+      };
+      res.render('parent_profile', user);
+    } else {
+      res.render('parent_profile');
+    }
+  });
+
+  // Load teacher page
+  router.get('/teacher', (req, res) => {
+    if (req.isAuthenticated()) {
+      const user = {
+        user: req.session.passport.user,
+        isloggedin: req.isAuthenticated()
+      };
+      res.render('teacher_profile', user);
+    } else {
+      res.render('teacher_profile');
+    }
+  });
 
   // Load dashboard page
   router.get('/dashboard', (req, res) => {
@@ -96,7 +108,6 @@ module.exports = (db) => {
       res.render('dashboard');
     }
   });
-  
 
   // Load example index page
   router.get('/example', function (req, res) {

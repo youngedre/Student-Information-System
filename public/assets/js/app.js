@@ -4,9 +4,11 @@ $('#add-user').on('click', function (event) {
   const newAccount = {
     firstName: $('#inputFirst').val().trim(),
     lastName: $('#inputLast').val().trim(),
+    parentTeacher: $('#inputUser').val().trim().toLowerCase(),
     email: $('#inputEmail').val().trim(),
     password: $('#inputPassword').val().trim()
   };
+  console.log($('#inputUser').val().trim().toLowerCase())
 
   if (newAccount.password.length > 0 && newAccount.email.length > 0 && newAccount.password.length > 0 && newAccount.lastName.length > 0 && newAccount.firstName.length > 0) {
     $.ajax({
@@ -14,7 +16,13 @@ $('#add-user').on('click', function (event) {
       url: '/api/register',
       data: newAccount
     }).then(() => {
-      window.location.href = '/';
+      if ($('#inputUser').val().trim().toLowerCase() === 'parent') {
+        window.location.href = '/parent';
+      } else if ($('#inputUser').val().trim().toLowerCase() === 'teacher') {
+        window.location.href = '/teacher';
+      } else {
+        alert('Please enter either parent or teacher!');
+      }
     });
   } else {
     console.log('**Please fill out entire form**');
@@ -128,6 +136,8 @@ $('#login').on('click', function (event) {
       // $('#user-info').modal('hide');
     }
   });
+
+  
 });
 
 $('[data-open-details]').click(function (e) {
@@ -135,3 +145,6 @@ $('[data-open-details]').click(function (e) {
   $(this).next().toggleClass('is-active');
   $(this).toggleClass('is-active');
 });
+
+$("[data-menu-underline-from-center] a").addClass("underline-from-center");
+
