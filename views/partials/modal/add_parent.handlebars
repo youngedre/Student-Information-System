@@ -4,8 +4,6 @@
 <ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="parent-tabs">
   <li class="tabs-title"><a href="#parent1" aria-selected="true" class = "is-active">Tab 1</a></li>
   <li class="tabs-title"><a href="#parent2">Tab 2</a></li>
-  <li class="tabs-title"><a href="#parent3">Tab 3</a></li>
-  <li class="tabs-title"><a href="#parent4">Tab 4</a></li>
 </ul>
 
 
@@ -15,146 +13,88 @@
      <form id= "create-form">
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="firstName">First Name</label>
-            <input type="text" class="form-control" id="firstName" placeholder="John">
+            <label for="parentFirstName">First Name</label>
+            <input type="text" class="form-control" id="parentFirstName" placeholder="John">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="lastName">Last Name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Doe">
+            <label for="parentLastName">Last Name</label>
+            <input type="text" class="form-control" id="parentLastName" placeholder="Doe">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="birthDate">Birthdate (Format: YYYY-MM-DD)</label>
-            <input type="text" class="form-control" id="birthDate" placeholder="2015-01-17">
+            <label for="email">Email Address</label>
+            <input type="text" class="form-control" id="email" placeholder="me@yahoo.com">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="gender">Gender</label>
-            <input type="text" class="form-control" id="gender" placeholder="Male or Female">
+            <label for="parentPhoneNumber">Phone Number</label>
+            <input type="text" class="form-control" id="parentPhoneNumber" placeholder="(919) 999-9999">
           </div>
         </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="ethnicity">Ethnicity</label>
-            <input type="text" class="form-control" id="ethnicity" placeholder="Hispanic or non-Hispanic">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="language">What language do you speak at home?</label>
-            <input type="text" class="form-control" id="language" placeholder="English / Spanish">
-          </div>
-        </div>
-       <a type="submit" id="new-student-main" class="button expanded">Next</a>
+       <a type="submit" id="new-parent-main" class="button expanded">Next</a>
     </form>
   </div>
   <!-- Section 2: panel 2 -->
   <div class="tabs-panel" id="parent2">
     <form>
-    <div class="form-row">
+        <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="emergencyContactName">Emergency Contact Name</label>
-            <input type="text" class="form-control" id="emergencyContactName" placeholder="John Doe">
+            <label for="streetAddress">Street Address</label>
+            <input type="text" class="form-control" id="streetAddress" placeholder="311 Main Street">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="emergencyContactPhone">Emergency Contact Phone Number</label>
-            <input type="text" class="form-control" id="emergencyContactPhone" placeholder="(919) 999-9999">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="Durham">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="emergencyContactRelation">Emergency Contact Relationship</label>
-            <input type="text" class="form-control" id="emergencyContactRelation" placeholder="Grandparent">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state" placeholder="NC">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="doctorName">Doctor's Name</label>
-            <input type="text" class="form-control" id="doctorName" placeholder="John Doe">
+            <label for="zipcode">Zip Code</label>
+            <input type="text" class="form-control" id="zipcode" placeholder="27713">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="doctorPhone">Doctor's Phone Number</label>
-            <input type="text" class="form-control" id="doctorPhone" placeholder="(919) 999-9999">
+            <label for="custodyRelation">What is your relationship to the child?</label>
+            <input type="text" class="form-control" id="custodyRelation" placeholder="Mother / Grandparent">
           </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="dentistName">Dentist's Name</label>
-            <input type="text" class="form-control" id="dentistName" placeholder="John Doe">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="dentistPhone">Dentist's Phone Number</label>
-            <input type="text" class="form-control" id="dentistPhone" placeholder="(919) 999-9999">
-          </div>
-        </div>
-        <a type="submit" id="new-student-medical-info" class="button expanded">Next</a>
-    </form>
-   </div>
-  <!-- Section 3: panel 3 -->
-  <div class="tabs-panel" id="parent3">
-    <form>
-     <div class="form-row">
-          <div class="form-group col-md-12">
-             <div class="grid-x grid-padding-x">
-          <fieldset>
-            <legend>Does Your child have any allergies?</legend>
-            <input type="checkbox" name="confirm-allergies" value="yes" id="confirm-allergies-yes"><label for="confirm-allergies-yes">Yes</label>
-            <input type="checkbox" name="confirm-allergies" value="no" id="confirm-allergies-no"><label for="confirm-allergies-no">No</label>
-          </fieldset>
         </div>
         
-            <label for="allergyDescription">Allergies (if any)</label>
-            <input type="text" class="form-control" id="allergyDescription" placeholder="Peanuts">
-          </div>
-        </div>
-        <div class="grid-x grid-padding-x">
-          <fieldset>
-            <legend>If you answered yes, how severe are your child's allergies?</legend>
-            <input type="radio" name="allergies" value="Life-Threatening" id="Life-Threatening"><label for="Life-Threatening">life Threatening</label>
-            <input type="radio" name="allergies" value="Blue" id="Severe"><label for="Severe">Severe</label>
-            <input type="radio" name="allergies" value="Yellow" id="Moderate"><label for="Moderate">Moderate</label>
-          </fieldset>
-        </div>
-         <a type="submit" id="new-student-allergy" class="button expanded">Next</a>
-    </form>
-  </div>
-  <!-- Section 4: 4 --> 
-  <div class="tabs-panel" id="parent4">
-     <form>
-     <div class="form-row">
+        <div class="form-row">
           <div class="form-group col-md-12">
-            <label for="parent-notes"></label>
-            <div class="large-12 columns">
+            <div class="grid-x grid-padding-x">
               <fieldset>
-                <legend>Additional notes for the teacher. </legend>
-                <textarea placeholder="small-12.columns" id="notes"></textarea>
+                <legend>Does your child live with you?</legend>
+                <input type="checkbox" name="livingWith" value="yes" id="livingWith"><label for="livingWith-yes">Yes</label>
+                <input type="checkbox" name="livingWith" value="no" id="livingWith"><label for="livingWith-no">No</label>
               </fieldset>
-          </div>
+            </div>
           </div>
         </div>
-         <a type="submit" id="add-new-student" class="button expanded">Submit Information</a>
-    </form>  
-    </div>
+
+        <a type="submit" id="add-new-parent" class="button expanded">Submit</a>
+    </form>
+   </div>
+
 </div>
 
 </div>

@@ -19,6 +19,7 @@ module.exports = (passport, db) => {
   router.delete('/examples/:id', AppController.deleteExample);
 
   router.post('/newStudent', AppController.addNewStudent);
+  router.post('/newParent', AppController.addNewParent);
 
   return router;
 };
