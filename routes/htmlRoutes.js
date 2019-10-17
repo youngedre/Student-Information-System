@@ -85,9 +85,8 @@ module.exports = (db) => {
     db.Student.findAll({
       where: {
         ParentId: id
-      }
-      // ,
-      // include: [db.Teacher]
+      },
+      include: [db.Teacher]
       // as: 'Teacher',
       // where: { id: db.Student.TeacherId }
     }).then(function (dbStudent) {
