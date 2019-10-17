@@ -310,7 +310,7 @@ section {
   vertical-align: middle;
 }
 body {
-background: #F7CD1C!important;
+background: #FFFDF5!important;
 }
 
 /* NAV BAR */
@@ -453,4 +453,23 @@ background: #F7CD1C!important;
   /* Class filtering */
   .filter-simple-item {
     margin-bottom: 2vh;
+  }
+
+  /* Typography */
+
+  body p, h2, h3, h4, h5, h6 {
+    font-family: muli, sans-serif;
+  }
+
+  h1 {
+    font-family: rig-solid-bold-fill, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .button, .login-box-social-button-facebook, .login-box-social-button-twitter {
+    font-family: muli, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 1px; 
   }

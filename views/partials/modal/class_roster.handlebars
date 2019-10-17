@@ -22,8 +22,6 @@
             <td><span class="expand-icon">Click to View</span></td>
           </tr>
 
-       
-
       <tr class="table-expand-row-content">
         <td colspan="8" class="table-expand-row-nested">
             <div class="grid-container">
@@ -34,157 +32,156 @@
           <li class="tabs-title"><a href="#panel8d">Tab 4</a></li>
         </ul>
 
+        <div class="tabs-content" data-tabs-content="my-children-tabs">
+        <!-- Section 1: panel 1 -->
+        <div class="tabs-panel is-active" id="panel5d">
+            <form id= "create-form">
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="studentFirstName">First Name</label>
+                    <input type="text" class="form-control" id="studentFirstName" value="{{firstName}}">
+                </div>
+                </div>
 
-<div class="tabs-content" data-tabs-content="my-children-tabs">
-  <!-- Section 1: panel 1 -->
-  <div class="tabs-panel is-active" id="panel5d">
-     <form id= "create-form">
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="studentFirstName">First Name</label>
-            <input type="text" class="form-control" id="studentFirstName" value="{{firstName}}">
-          </div>
-        </div>
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="studentLastName">Last Name</label>
+                    <input type="text" class="form-control" id="studentLastName" placeholder="Doe">
+                </div>
+                </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="studentLastName">Last Name</label>
-            <input type="text" class="form-control" id="studentLastName" placeholder="Doe">
-          </div>
-        </div>
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="studentBirthDate">Birthdate (Format: YYYY-MM-DD)</label>
+                    <input type="text" class="form-control" id="studentBirthDate" placeholder="2015-01-17">
+                </div>
+                </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="studentBirthDate">Birthdate (Format: YYYY-MM-DD)</label>
-            <input type="text" class="form-control" id="studentBirthDate" placeholder="2015-01-17">
-          </div>
-        </div>
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="studentGender">Gender</label>
+                    <input type="text" class="form-control" id="studentGender" placeholder="Male or Female">
+                </div>
+                </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="studentGender">Gender</label>
-            <input type="text" class="form-control" id="studentGender" placeholder="Male or Female">
-          </div>
-        </div>
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="studentEthnicity">Ethnicity</label>
+                    <input type="text" class="form-control" id="studentEthnicity" placeholder="Hispanic or non-Hispanic">
+                </div>
+                </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="studentEthnicity">Ethnicity</label>
-            <input type="text" class="form-control" id="studentEthnicity" placeholder="Hispanic or non-Hispanic">
-          </div>
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="studentLanguage">What language do you speak at home?</label>
+                    <input type="text" class="form-control" id="studentLanguage" placeholder="English / Spanish">
+                </div>
+                </div>
+                <div class="form-row">
+                <label for="exampleFileUpload" class="button">Upload File</label>
+                <input type="file" id="exampleFileUpload" class="show-for-sr">
+                </div>
+            <a type="submit" id="add-user" class="button expanded">Update</a>
+            </form>
         </div>
+        <!-- Section 2: panel 2 -->
+        <div class="tabs-panel" id="panel6d">
+            <form>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="emergencyContactName">Emergency Contact Name</label>
+                    <input type="text" class="form-control" id="emergencyContactName" placeholder="John Doe">
+                </div>
+                </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="studentLanguage">What language do you speak at home?</label>
-            <input type="text" class="form-control" id="studentLanguage" placeholder="English / Spanish">
-          </div>
-        </div>
-        <div class="form-row">
-          <label for="exampleFileUpload" class="button">Upload File</label>
-          <input type="file" id="exampleFileUpload" class="show-for-sr">
-          </div>
-       <a type="submit" id="add-user" class="button expanded">Update</a>
-    </form>
-  </div>
-  <!-- Section 2: panel 2 -->
-  <div class="tabs-panel" id="panel6d">
-    <form>
-    <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="emergencyContactName">Emergency Contact Name</label>
-            <input type="text" class="form-control" id="emergencyContactName" placeholder="John Doe">
-          </div>
-        </div>
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="emergencyContactPhone">Emergency Contact Phone Number</label>
+                    <input type="text" class="form-control" id="emergencyContactPhone" placeholder="(919) 999-9999">
+                </div>
+                </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="emergencyContactPhone">Emergency Contact Phone Number</label>
-            <input type="text" class="form-control" id="emergencyContactPhone" placeholder="(919) 999-9999">
-          </div>
-        </div>
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="emergencyContactRelation">Emergency Contact Relationship</label>
+                    <input type="text" class="form-control" id="emergencyContactRelation" placeholder="Grandparent">
+                </div>
+                </div>
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="doctorName">Doctor's Name</label>
+                    <input type="text" class="form-control" id="doctorName" placeholder="John Doe">
+                </div>
+                </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="emergencyContactRelation">Emergency Contact Relationship</label>
-            <input type="text" class="form-control" id="emergencyContactRelation" placeholder="Grandparent">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="doctorName">Doctor's Name</label>
-            <input type="text" class="form-control" id="doctorName" placeholder="John Doe">
-          </div>
-        </div>
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="doctorPhone">Doctor's Phone Number</label>
+                    <input type="text" class="form-control" id="doctorPhone" placeholder="(919) 999-9999">
+                </div>
+                </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="doctorPhone">Doctor's Phone Number</label>
-            <input type="text" class="form-control" id="doctorPhone" placeholder="(919) 999-9999">
-          </div>
-        </div>
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="dentistName">Dentist's Name</label>
+                    <input type="text" class="form-control" id="dentistName" placeholder="John Doe">
+                </div>
+                </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="dentistName">Dentist's Name</label>
-            <input type="text" class="form-control" id="dentistName" placeholder="John Doe">
-          </div>
+                <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="dentistPhone">Dentist's Phone Number</label>
+                    <input type="text" class="form-control" id="dentistPhone" placeholder="(919) 999-9999">
+                </div>
+                </div>
+                <a type="submit" id="add-user" class="button expanded">Update</a>
+            </form>
         </div>
-
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="dentistPhone">Dentist's Phone Number</label>
-            <input type="text" class="form-control" id="dentistPhone" placeholder="(919) 999-9999">
-          </div>
+        <!-- Section 3: panel 3 -->
+        <div class="tabs-panel" id="panel7d">
+            <form>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <div class="grid-x grid-padding-x">
+                <fieldset>
+                    <legend>Does Your child have any allergies?</legend>
+                    <input type="checkbox" name="confirm-allergies" value="yes" id="confirm-allergies-yes"><label for="confirm-allergies-yes">Yes</label>
+                    <input type="checkbox" name="confirm-allergies" value="no" id="confirm-allergies-no"><label for="confirm-allergies-no">No</label>
+                </fieldset>
+                </div>
+                
+                    <label for="allergyDescription">Allergies (if any)</label>
+                    <input type="text" class="form-control" id="allergyDescription" placeholder="Peanuts">
+                </div>
+                </div>
+                <div class="grid-x grid-padding-x">
+                <fieldset>
+                    <legend>If you answered yes, how severe are your child's allergies? (1 = severe 3 = mild)</legend>
+                    <input type="radio" name="allergies" value="life-threatening" id="life-threatening"><label for="life-threatening">life Threatening</label>
+                    <input type="radio" name="allergies" value="Blue" id="Severe"><label for="Severe">Severe</label>
+                    <input type="radio" name="allergies" value="Yellow" id="Moderate"><label for="Moderate">Moderate</label>
+                </fieldset>
+                </div>
+                <a type="submit" id="add-user" class="button expanded">Update</a>
+            </form>
         </div>
-        <a type="submit" id="add-user" class="button expanded">Update</a>
-    </form>
-   </div>
-  <!-- Section 3: panel 3 -->
-  <div class="tabs-panel" id="panel7d">
-    <form>
-     <div class="form-row">
-          <div class="form-group col-md-12">
-             <div class="grid-x grid-padding-x">
-          <fieldset>
-            <legend>Does Your child have any allergies?</legend>
-            <input type="checkbox" name="confirm-allergies" value="yes" id="confirm-allergies-yes"><label for="confirm-allergies-yes">Yes</label>
-            <input type="checkbox" name="confirm-allergies" value="no" id="confirm-allergies-no"><label for="confirm-allergies-no">No</label>
-          </fieldset>
+        <!-- Section 4: 4 --> 
+        <div class="tabs-panel" id="panel8d">
+            <form>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="parent-notes"></label>
+                    <div class="large-12 columns">
+                    <fieldset>
+                        <legend>Additional notes for the teacher. </legend>
+                        <textarea placeholder="small-12.columns"></textarea>
+                    </fieldset>
+                </div>
+                </div>
+                </div>
+                <a type="submit" id="add-user" class="button expanded">Update</a>
+            </form>  
         </div>
-        
-            <label for="allergyDescription">Allergies (if any)</label>
-            <input type="text" class="form-control" id="allergyDescription" placeholder="Peanuts">
-          </div>
-        </div>
-        <div class="grid-x grid-padding-x">
-          <fieldset>
-            <legend>If you answered yes, how severe are your child's allergies? (1 = severe 3 = mild)</legend>
-            <input type="radio" name="allergies" value="life-threatening" id="life-threatening"><label for="life-threatening">life Threatening</label>
-            <input type="radio" name="allergies" value="Blue" id="Severe"><label for="Severe">Severe</label>
-            <input type="radio" name="allergies" value="Yellow" id="Moderate"><label for="Moderate">Moderate</label>
-          </fieldset>
-        </div>
-         <a type="submit" id="add-user" class="button expanded">Update</a>
-    </form>
-  </div>
-  <!-- Section 4: 4 --> 
-  <div class="tabs-panel" id="panel8d">
-     <form>
-     <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="parent-notes"></label>
-            <div class="large-12 columns">
-              <fieldset>
-                <legend>Additional notes for the teacher. </legend>
-                <textarea placeholder="small-12.columns"></textarea>
-              </fieldset>
-          </div>
-          </div>
-        </div>
-         <a type="submit" id="add-user" class="button expanded">Update</a>
-    </form>  
-  </div>
   
 </div>
 
