@@ -1,0 +1,103 @@
+<section id="teacher-profile">
+    <div class="content">
+        <div class="grid-container">
+
+            <ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="parent-tabs">
+                <li class="tabs-title"><a href="#teacher1" aria-selected="true" class = "is-active">Class Room Details</a></li>
+                <li class="tabs-title"><a href="#teacher2">Contact Details</a></li>
+            </ul>
+
+            <div class="tabs-content" data-tabs-content="teacher-tabs">
+                <!-- Section 1: Class Room Details -->
+                <div class="tabs-panel is-active" id="teacher1">
+                    <form id= "create-form">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="teachersFullName">Teacher's name</label>
+                                <input type="text" class="form-control" id="teachersFullName" placeholder="John">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="teacherEmail">Email</label>
+                                <input type="text" class="form-control" id="teacherEmail" placeholder="teacher@gmail.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="teacherId">Teacher ID</label>
+                                <input type="text" class="form-control" id="teacherId" placeholder="#24681012">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="roomNumber">Class Room Number</label>
+                                <input type="text" class="form-control" id="roomNumber" placeholder="12345678">
+                            </div>
+                        </div>
+
+                        <a type="submit" id="new-parent-main" class="button expanded">Next</a>
+                    </form>
+                </div>
+                <!-- Section 2: panel 2 -->
+                <div class="tabs-panel" id="teacher2">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="teacherFirstName">First Name</label>
+                                <input type="text" class="form-control" id="teacherFirstName" placeholder="Jane">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="teacherLastName">Last Name</label>
+                                <input type="text" class="form-control" id="teacherLirstName" placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="teacherPhoneNumber">Phone Number</label>
+                                <input type="text" class="form-control" id="teacherPhoneNumber" placeholder="(919) 999-9999">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="streetAddress">Street Address</label>
+                                <input type="text" class="form-control" id="streetAddress" placeholder="311 Main Street">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" id="city" placeholder="Durham">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="state">State</label>
+                                <input type="text" class="form-control" id="state" placeholder="NC">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="zipcode">Zip Code</label>
+                                <input type="text" class="form-control" id="zipcode" placeholder="27713">
+                            </div>
+                        </div>
+
+                        <a type="submit" id="add-new-parent" class="button expanded">Submit</a>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

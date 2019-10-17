@@ -15,14 +15,16 @@
     $(this).siblings().removeClass('is-active');
     $(this).addClass('is-active');
   });
+
+$('#teacher-tabs').foundation();
   
 $('#myClass').hide();
-
+$('#teacher-profile').hide(); 
 
   $('#teacherProfile').on('click', function () {
     $('#teacher-profile').show();
-    $('#add-child').hide();
-    $('#myChildren').hide();
+    $('#myClass').hide();
+    $('#teacher-dashboard').hide();
   });
 
   $('#teacherMail').on('click', function () {
@@ -34,4 +36,12 @@ $('#myClass').hide();
 
   $('#classRoster').on('click', function(){
     $('#myClass').show();
+    $('#teacher-profile').hide();
+    $('#teacher-dashboard').hide();
+  })
+
+  $('#dashboard').on('click', function(){
+    $('#teacher-dashboard').show();
+    $('#myClass').hide();
+    $('#teacher-profile').hide();
   })
