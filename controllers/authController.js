@@ -32,7 +32,10 @@ module.exports = (passport, db) => {
             if (err) {
               return next(err);
             }
-            return res.status(200).json({ loggedIn: true });
+            return res.status(200).json({ 
+              loggedIn: true,
+              parentTeacher: user.parentTeacher
+             });
           });
         } else {
           res.json({ loggedIn: false, error: 'Can not log in, check your user name and password!' });

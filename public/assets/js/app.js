@@ -162,9 +162,13 @@ $('#login').on('click', function (event) {
   };
 
   $.post('/api/login', user, (result) => {
-    // console.log(result);
+    console.log(result);
     if (result.loggedIn) {
-      $(document.location).attr('href', '/dashboard');
+      if (result.parentTeacher === 'parent') {
+        $(document.location).attr('href', '/parent');
+      } else if (result.parentTeacher === 'teacher') {
+        $(document.location).attr('href', '/teacher');
+      }
     } else {
       $('#login-err-msg').empty('').text(result.error);
       // $('#user-info').modal('hide');
