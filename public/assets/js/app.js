@@ -1,5 +1,37 @@
 /* eslint-disable no-var */
 /* eslint-disable prefer-const */
+
+// This function will be used later to randomly select an image for new student additions
+function addImage () {
+  var imageSelection = [
+    'abby.jpeg',
+    'big_bird.png',
+    'cookie_monster.png',
+    'count.jpeg',
+    'daniel_tiger.jpeg',
+    'eeyore.png',
+    'elaina.jpeg',
+    'elmo.png',
+    'grover.png',
+    'kitty.jpeg',
+    'owl.jpeg',
+    'owl2.jpeg',
+    'piglet.jpeg',
+    'prince.jpeg',
+    'sesame_street_2.jpeg',
+    'sesame_street_3.jpeg',
+    'sesame_street_4.jpeg',
+    'sesame_street_5.jpeg',
+    'tigger.jpeg',
+    'winnie.jpeg'
+  ];
+
+  var randomSelection = Math.floor(Math.random() * imageSelection.length);
+  var newImageLink = imageSelection[randomSelection];
+
+  return newImageLink;
+}
+
 $('#add-user').on('click', function (event) {
   event.preventDefault();
 
@@ -180,6 +212,7 @@ $('#add-new-student').on('click', function () {
     allergyDescription: $('#allergyDescription').val().trim(),
     allergySeverity: allergySeverity,
     notes: $('#notes').val().trim(),
+    imageLink: addImage(),
     TeacherId: Math.floor(Math.random() * 15) + 1
   };
   // For testing purposes:
@@ -231,6 +264,7 @@ $('#add-new-parent').on('click', function () {
   });
 });
 
+// ******** THIS WAS AN ERROR IN MERGING... SAVED THIS AND THE NEXT ONE
 /* SIDE NAVIGATION */
 $('[data-open-details]').click(function (e) {
   e.preventDefault();
@@ -238,6 +272,7 @@ $('[data-open-details]').click(function (e) {
   $(this).toggleClass('is-active');
 });
 
+// ******** THIS WAS AN ERROR IN MERGING... SAVED THIS AND THE PREVIOUS ONE
 /* SIDE NAVIGATION */
 $('[data-menu-underline-from-center] a').addClass('underline-from-center');
 $('#offCanvasLeft1').foundation();
