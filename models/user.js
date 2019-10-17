@@ -28,6 +28,10 @@ module.exports = function (sequelize, DataTypes) {
     isAdmin: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
+    },
+    parentTeacher: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   }, {
     timestamps: true,

@@ -38,11 +38,11 @@ $('#add-user').on('click', function (event) {
   const newAccount = {
     firstName: $('#inputFirst').val().trim(),
     lastName: $('#inputLast').val().trim(),
-    parentTeacher: $('#inputUser').val().trim().toLowerCase(),
+    parentTeacher: window.parentOrTeacher,
     email: $('#inputEmail').val().trim(),
     password: $('#inputPassword').val().trim()
   };
-  console.log($('#inputUser').val().trim().toLowerCase());
+  console.log(newAccount);
 
   if (newAccount.password.length > 0 && newAccount.email.length > 0 && newAccount.password.length > 0 && newAccount.lastName.length > 0 && newAccount.firstName.length > 0) {
     $.ajax({
@@ -50,9 +50,9 @@ $('#add-user').on('click', function (event) {
       url: '/api/register',
       data: newAccount
     }).then(() => {
-      if ($('#inputUser').val().trim().toLowerCase() === 'parent') {
+      if (window.parentOrTeacher === 'parent') {
         window.location.href = '/parent';
-      } else if ($('#inputUser').val().trim().toLowerCase() === 'teacher') {
+      } else if (window.parentOrTeacher === 'teacher') {
         window.location.href = '/teacher';
       } else {
         alert('Please enter either parent or teacher!');
