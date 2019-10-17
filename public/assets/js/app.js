@@ -2,7 +2,7 @@
 /* eslint-disable prefer-const */
 
 // This function will be used later to randomly select an image for new student additions
-function addImage() {
+function addImage () {
   var imageSelection = [
     'abby.jpeg',
     'big_bird.png',
@@ -26,7 +26,7 @@ function addImage() {
     'winnie.jpeg'
   ];
 
-  var randomSelection = Math.Floor(Math.Random() * imageSelection.length);
+  var randomSelection = Math.floor(Math.random() * imageSelection.length);
   var newImageLink = imageSelection[randomSelection];
 
   return newImageLink;
