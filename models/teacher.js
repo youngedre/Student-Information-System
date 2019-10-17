@@ -9,7 +9,12 @@ module.exports = function (sequelize, DataTypes) {
 
   Teacher.associate = function (models) {
     // Associating Teachers with Students
-    Teacher.hasMany(models.Student);
+    Teacher.hasMany(models.Student, {
+      foreignKey: {
+        name: 'studentId',
+        allowNull: true
+      }
+    });
   };
 
   return Teacher;

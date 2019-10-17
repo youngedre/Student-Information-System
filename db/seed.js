@@ -21,8 +21,14 @@ module.exports = (db) => {
     isAdmin: false,
     parentTeacher: 'parent'
   });
-  db.Parent.bulkCreate(parentDataJSON);
-  db.Approved.bulkCreate(approvedDataJSON);
-  db.Teacher.bulkCreate(teacherDataJSON);
-  db.Student.bulkCreate(studentDataJSON);
+
+  db.Parent.bulkCreate(parentDataJSON).then(function () {
+    return db.Approved.bulkCreate(approvedDataJSON);
+  }).then(function () {
+    return db.Teacher.bulkCreate(teacherDataJSON);
+  }).then(function () {
+    return db.Student.bulkCreate(studentDataJSON);
+  }).then(function () {
+    console.log('Seed completed.');
+  });
 };
