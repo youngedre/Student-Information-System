@@ -1,103 +1,101 @@
 <section id="add-parent" style="background-color: #FFFDF5"> 
-<div class="content">
-  <div class="grid-container">
-<ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="parent-tabs">
-  <li class="tabs-title"><a href="#parent1" aria-selected="true" class = "is-active">Tab 1</a></li>
-  <li class="tabs-title"><a href="#parent2">Tab 2</a></li>
-</ul>
+    <div class="content">
+        <div class="grid-container">
+            <ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="parent-tabs">
+                <li class="tabs-title"><a href="#parent1" aria-selected="true" class = "is-active">Tab 1</a></li>
+                <li class="tabs-title"><a href="#parent2">Tab 2</a></li>
+            </ul>
 
 
-<div class="tabs-content" data-tabs-content="parent-tabs">
-  <!-- Section 1: panel 1 -->
-  <div class="tabs-panel is-active" id="parent1">
-     <form id= "create-form">
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="parentFirstName">First Name</label>
-            <input type="text" class="form-control" id="parentFirstName" placeholder="John">
-          </div>
-        </div>
+            <div class="tabs-content" data-tabs-content="parent-tabs">
+                <!-- Section 1: panel 1 -->
+                <div class="tabs-panel is-active" id="parent1">
+                    <form id= "create-form">
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="parentFirstName">First Name</label>
+                            <input type="text" class="form-control" id="parentFirstName" placeholder="John">
+                        </div>
+                        </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="parentLastName">Last Name</label>
-            <input type="text" class="form-control" id="parentLastName" placeholder="Doe">
-          </div>
-        </div>
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="parentLastName">Last Name</label>
+                            <input type="text" class="form-control" id="parentLastName" placeholder="Doe">
+                        </div>
+                        </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="email">Email Address</label>
-            <input type="text" class="form-control" id="email" placeholder="me@yahoo.com">
-          </div>
-        </div>
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="email">Email Address</label>
+                            <input type="text" class="form-control" id="email" placeholder="me@yahoo.com">
+                        </div>
+                        </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="parentPhoneNumber">Phone Number</label>
-            <input type="text" class="form-control" id="parentPhoneNumber" placeholder="(919) 999-9999">
-          </div>
-        </div>
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="parentPhoneNumber">Phone Number</label>
+                            <input type="text" class="form-control" id="parentPhoneNumber" placeholder="(919) 999-9999">
+                        </div>
+                        </div>
 
-       <a type="submit" id="new-parent-main" class="button expanded">Next</a>
-    </form>
-  </div>
-  <!-- Section 2: panel 2 -->
-  <div class="tabs-panel" id="parent2">
-    <form>
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="streetAddress">Street Address</label>
-            <input type="text" class="form-control" id="streetAddress" placeholder="311 Main Street">
-          </div>
-        </div>
+                    <a type="submit" id="new-parent-main" class="button expanded">Next</a>
+                    </form>
+                </div>
+                <!-- Section 2: panel 2 -->
+                <div class="tabs-panel" id="parent2">
+                    <form>
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="streetAddress">Street Address</label>
+                            <input type="text" class="form-control" id="streetAddress" placeholder="311 Main Street">
+                        </div>
+                        </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="city">City</label>
-            <input type="text" class="form-control" id="city" placeholder="Durham">
-          </div>
-        </div>
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="Durham">
+                        </div>
+                        </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="state">State</label>
-            <input type="text" class="form-control" id="state" placeholder="NC">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="zipcode">Zip Code</label>
-            <input type="text" class="form-control" id="zipcode" placeholder="27713">
-          </div>
-        </div>
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="state">State</label>
+                            <input type="text" class="form-control" id="state" placeholder="NC">
+                        </div>
+                        </div>
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="zipcode">Zip Code</label>
+                            <input type="text" class="form-control" id="zipcode" placeholder="27713">
+                        </div>
+                        </div>
 
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="custodyRelation">What is your relationship to the child?</label>
-            <input type="text" class="form-control" id="custodyRelation" placeholder="Mother / Grandparent">
-          </div>
-        </div>
-        
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <div class="grid-x grid-padding-x">
-              <fieldset>
-                <legend>Does your child live with you?</legend>
-                <input type="checkbox" name="livingWith" value="yes" id="livingWith"><label for="livingWith-yes">Yes</label>
-                <input type="checkbox" name="livingWith" value="no" id="livingWith"><label for="livingWith-no">No</label>
-              </fieldset>
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="custodyRelation">What is your relationship to the child?</label>
+                            <input type="text" class="form-control" id="custodyRelation" placeholder="Mother / Grandparent">
+                        </div>
+                        </div>
+                        
+                        <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <div class="grid-x grid-padding-x">
+                            <fieldset>
+                                <legend>Does your child live with you?</legend>
+                                <input type="checkbox" name="livingWith" value="yes" id="livingWith"><label for="livingWith-yes">Yes</label>
+                                <input type="checkbox" name="livingWith" value="no" id="livingWith"><label for="livingWith-no">No</label>
+                            </fieldset>
+                            </div>
+                        </div>
+                        </div>
+
+                        <a type="submit" id="add-new-parent" class="button expanded">Submit</a>
+                    </form>
+                </div>
             </div>
-          </div>
+            
         </div>
-
-        <a type="submit" id="add-new-parent" class="button expanded">Submit</a>
-    </form>
-   </div>
-
-</div>
-
-</div>
-</div>
-
+    </div>
 </section>
