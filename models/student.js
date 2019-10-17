@@ -62,19 +62,12 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING
     },
     notes: {
+      type: DataTypes.TEXT
+    },
+    imageLink: {
       type: DataTypes.STRING
     }
   });
-
-  Student.associate = function (models) {
-    // We're saying that a Post should belong to an Author
-    // A Post can't be created without an Author due to the foreign key constraint
-    Student.belongsTo(models.Teacher, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
   Student.associate = function (models) {
     Student.belongsTo(models.Teacher, {
       foreignKey: {
@@ -82,11 +75,11 @@ module.exports = function (sequelize, DataTypes) {
       }
     });
   };
-  // Student.associate = function (models) {
-  //   Student.belongsTo(models.Parent,
-  //     { constraints: false }
-  //   );
-  // };
+  Student.associate = function (models) {
+    Student.belongsTo(models.Parent,
+      { constraints: false }
+    );
+  };
   Student.associate = (models) => {
     Student.belongsToMany(models.Approved, {
       through: 'StudentApprovedPickup',

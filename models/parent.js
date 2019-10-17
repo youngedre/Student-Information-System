@@ -27,7 +27,8 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false
     },
     employer: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false
     },
     streetAddress: {
       type: DataTypes.STRING,
