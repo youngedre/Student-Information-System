@@ -6,12 +6,16 @@ module.exports = function (sequelize, DataTypes) {
     phone_number: DataTypes.STRING,
     email: DataTypes.STRING
   });
+  // Teacher's name
+  // Email
+  // Teacher ID
+  // Class Room Number
 
   Teacher.associate = function (models) {
     // Associating Teachers with Students
     Teacher.hasMany(models.Student, {
       foreignKey: {
-        name: 'studentId',
+        name: 'TeacherId',
         allowNull: true
       }
     });

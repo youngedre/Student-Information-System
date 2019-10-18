@@ -12,42 +12,24 @@
             <div class="row small-up-2 medium-up-3 large-up-4">
                 <div class="grid-x grid-padding-x text-center">
 <!-- EDIT Below this line.. these are placeholder images for filtering --> 
-                    <div class="large-3 cell filter-simple-item allergies">
-                        <img class="allergies" src="https://spaceholder.cc/350x350" alt="" />
-                    </div>
-                    <div class="large-3 cell filter-simple-item nature">
-                        <img src="https://placeimg.com/350/350/nature" alt="" />
-                    </div>
-                    <div class="large-3 cell filter-simple-item animals">
-                        <img src="https://placeimg.com/350/350/animals" alt="" />
-                    </div>
-                    <div class="large-3 cell filter-simple-item animals">
-                        <img src="https://placeimg.com/350/350/animals" alt="" />
-                    </div>
-                    <div class="large-3 cell filter-simple-item animals">
-                        <img src="https://placeimg.com/350/350/animals" alt="" />
-                    </div>
-                    <div class="large-3 cell filter-simple-item nature">
-                        <img src="https://placeimg.com/350/350/nature" alt="" />
-                    </div>
-                    <div class="large-3 cell filter-simple-item nature">
-                        <img src="https://placeimg.com/350/350/nature" alt="" />
-                    </div>
-                    <div class="large-3 cell filter-simple-item animals">
-                        <img src="https://placeimg.com/350/350/animals" alt="" />
-                    </div>
-                    <div class="large-3 cell filter-simple-item nature">
-                        <img src="https://placeimg.com/350/350/nature" alt="" />
-                    </div>
-                    <div class="large-3 cell filter-simple-item animals">
-                        <img src="https://placeimg.com/350/350/animals" alt="" />
-                    </div>
-                    <div class="large-3 cell filter-simple-item space">
-                        <img src="https://spaceholder.cc/350x350" alt="" />
-                    </div>
-                    <div class="large-3 cell filter-simple-item space">
-                        <img src="https://spaceholder.cc/350x350" alt="" />
-                    </div>
+                    
+                    {{#each classRosterData}}
+
+                        {{#if allergies}}
+                            <div class="large-3 cell filter-simple-item allergies">
+                                <img class="allergies" src="/static-files/assets/images/stock_images/{{imageLink}}"></img>
+                                <h5>{{firstName}} {{lastName}}</h5>
+                                <h5>{{allergyDescription}}</h5>
+                            </div>
+                        {{else}}
+                            <div class="large-3 cell filter-simple-item">
+                                <img src="/static-files/assets/images/stock_images/{{imageLink}}"></img>
+                                <h5>{{firstName}} {{lastName}}</h5>
+                            </div>
+                        {{/if}}
+
+                    {{/each}}
+ 
                 </div>
             </div>
     </div>
