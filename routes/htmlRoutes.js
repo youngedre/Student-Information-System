@@ -102,7 +102,7 @@ module.exports = (db) => {
   });
 
   // Load teacher page
-  router.get('/teacher', (req, res) => {
+  router.get('/teacher/:id?', (req, res) => {
     if (req.isAuthenticated()) {
       const user = {
         user: req.session.passport.user,
