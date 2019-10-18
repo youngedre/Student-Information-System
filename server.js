@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
-const morgan =   require('morgan');
+const morgan = require('morgan');
 const passport = require('passport');
 const moment = require('moment');
 const helmet = require('helmet');
@@ -50,10 +50,8 @@ if (app.get('env') === 'test') {
   syncOptions.force = true;
 }
 
-console.log('syncOptions:', syncOptions);
-
 db.sequelize.sync(syncOptions).then(() => {
-  if (app.get('env') !== 'test' || syncOptions.force) {
+  if (app.get('env') !== 'test' && syncOptions.force) {
     require('./db/seed')(db);
   }
 
