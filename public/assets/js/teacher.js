@@ -17,6 +17,7 @@ $('.filter-simple-button').click(function () {
 });
 
 $('#teacher-tabs').foundation();
+$('#class-roster').foundation();
 
 $('#myClass').hide();
 $('#teacher-profile').hide();
