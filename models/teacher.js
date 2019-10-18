@@ -1,15 +1,43 @@
 module.exports = function (sequelize, DataTypes) {
   const Teacher = sequelize.define('Teacher', {
-    first_name: DataTypes.STRING,
-    last_name: DataTypes.STRING,
-    classroom_number: DataTypes.INTEGER,
-    phone_number: DataTypes.STRING,
-    email: DataTypes.STRING
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
+    firstName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    employeeId: {
+      type: DataTypes.INTEGER
+    },
+    roomNumber: {
+      type: DataTypes.INTEGER
+    },
+    email: {
+      type: DataTypes.STRING
+    },
+    phoneNumber: {
+      type: DataTypes.STRING
+    },
+    streetAddress: {
+      type: DataTypes.STRING
+    },
+    city: {
+      type: DataTypes.STRING
+    },
+    state: {
+      type: DataTypes.STRING
+    },
+    zipcode: {
+      type: DataTypes.INTEGER
+    }
   });
-  // Teacher's name
-  // Email
-  // Teacher ID
-  // Class Room Number
 
   Teacher.associate = function (models) {
     // Associating Teachers with Students

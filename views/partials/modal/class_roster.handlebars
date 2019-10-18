@@ -5,10 +5,17 @@
       <table id="student-data" class="table-expand">
         <thead style="border: none;">
           <tr class="table-expand-row">
+            <th style="width: 100px">Profile Photo</th>
+            <th style="width: 100px">Child's Name</th>
+            <th style="width: 100px">Parent's Name</th>
+            <th style="width: 100px">Parent's Contact</th>
+            <th style="width: 100px">Expand Data</th>
+{{!-- 
+
             <th width="200">Child's Name</th>
             <th>Parent's Name</th>
             <th>Parent's Contact</th>
-            <th width="150">Expand Data</th>
+            <th width="150">Expand Data</th> --}}
           </tr>
         </thead>
 
@@ -16,9 +23,10 @@
           {{#each classRosterData}}
 
           <tr class="table-expand-row" data-open-details id="existingStudentData">
+            <td><img class="student-photo" src="/static-files/assets/images/stock_images/{{imageLink}}"></img></td>
             <td>{{firstName}} {{lastName}}</td>
-            <td>Parent's Name</td>
-            <td>Parent's contact</td>
+            <td>{{Parent.firstName}} {{Parent.lastName}}</td>
+            <td>{{Parent.phoneNumber}}</td>
             <td><span class="expand-icon">Click to View</span></td>
           </tr>
 
@@ -26,10 +34,12 @@
         <td colspan="8" class="table-expand-row-nested">
             <div class="grid-container">
         <ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="my-children-tabs">
-          <li class="tabs-title is-active"><a href="#panel5d" aria-selected="true">General</a></li>
+          <li class="tabs-title is-active"><a href="#panel5d" aria-selected="true">Student Info</a></li>
           <li class="tabs-title title-tab-"><a href="#panel6d">Emergency Info</a></li>
           <li class="tabs-title"><a href="#panel7d">Allergies</a></li>
           <li class="tabs-title"><a href="#panel8d">Notes</a></li>
+          <li class="tabs-title"><a href="#panel9d">Parent Info</a></li>
+          <li class="tabs-title"><a href="#panel10d">Address</a></li>
         </ul>
 
         <div class="tabs-content" data-tabs-content="my-children-tabs">
@@ -161,16 +171,110 @@
         <!-- Section 4: 4 --> 
         <div class="tabs-panel" id="panel8d">
             <form>
-            <div class="form-row">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="parent-notes"></label>
+                        <div class="large-12 columns">
+                            <fieldset>
+                                <legend>Additional notes for the teacher. </legend>
+                                <textarea>{{notes}}</textarea>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </form>  
+        </div>
+        <!-- Section 5: 5 --> 
+        <div class="tabs-panel" id="panel9d">
+            <form>
+
+                {{!-- <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="parent-notes"></label>
-                    <div class="large-12 columns">
-                    <fieldset>
-                        <legend>Additional notes for the teacher. </legend>
-                        <textarea>{{notes}}</textarea>
-                    </fieldset>
+                    <label for="dentistName">Dentist's Name</label>
+                    <input type="text" class="form-control" id="dentistName" value="{{dentistName}}">
                 </div>
+                </div> --}}
+
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="parentFirstName">Parent's First Name</label>
+                        <input type="text" class="form-control" id="parentFirstName" value="{{Parent.firstName}}">
+                    </div>
                 </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="parentLastName">Parent's Last Name</label>
+                        <input type="text" class="form-control" id="parentLastName" value="{{Parent.lastName}}">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="email">Parent's Email Address</label>
+                        <input type="text" class="form-control" id="email" value="{{Parent.email}}">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="parentPhoneNumber">Parent's Phone Number</label>
+                        <input type="text" class="form-control" id="parentPhoneNumber" value="{{Parent.phoneNumber}}">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+                <!-- Section 6: 6 --> 
+        <div class="tabs-panel" id="panel10d">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="streetAddress">Street Address</label>
+                        <input type="text" class="form-control" id="streetAddress" value="{{Parent.streetAddress}}">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" value="{{Parent.city}}">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="state">State</label>
+                        <input type="text" class="form-control" id="state" value="{{Parent.state}}">
+                    </div>
+                </div>
+                    
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="zipcode">Zip Code</label>
+                        <input type="text" class="form-control" id="zipcode" value="{{Parent.zipcode}}">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="custodyRelation">What is your relationship to the child?</label>
+                        <input type="text" class="form-control" id="custodyRelation" value="{{Parent.custodyRelation}}">
+                    </div>
+                </div>
+                    
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <div class="grid-x grid-padding-x">
+                        <fieldset>
+                            <legend>Does your child live with you?</legend>
+                            <input type="checkbox" name="livingWith" value="yes" id="livingWith"><label for="livingWith-yes">Yes</label>
+                            <input type="checkbox" name="livingWith" value="no" id="livingWith"><label for="livingWith-no">No</label>
+                        </fieldset>
+                        </div>
+                    </div>
                 </div>
             </form>  
         </div>

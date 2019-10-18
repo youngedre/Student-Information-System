@@ -114,20 +114,32 @@ module.exports = (db) => {
   // });
 
   // Load teacher page
-  router.get('/teacher', (req, res) => {
+  router.get('/teacher/:id?', (req, res) => {
     if (req.params.id) {
       var id = req.params.id;
     } else {
       var id = 11;
     }
+
     db.Student.findAll({
       where: {
         TeacherId: id
-      }
+      },
+      include: [db.Parent]
     }).then(function (dbClassRoster) {
-      // res.render('teacher_profile', user);
-      res.render('teacher_profile', {
-        classRosterData: dbClassRoster
+      return db.Teacher.findOne({
+        where: {
+          id: id
+        }
+      }).then(function (dbTeacher) {
+        console.log('Data gathered');
+        console.log(dbClassRoster);
+        console.log(dbTeacher);
+        // res.render('teacher_profile', user);
+        res.render('teacher_profile', {
+          classRosterData: dbClassRoster,
+          teacherData: dbTeacher
+        });
       });
     });
   });

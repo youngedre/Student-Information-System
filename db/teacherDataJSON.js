@@ -1,20 +1,20 @@
 const teacherDataJSON =
-  [
-    { 'first_name': 'Burg', 'last_name': 'Timbridge', 'classroom_number': 1, 'phone_number': '(228) 5310233', 'email': 'btimbridge0@umn.edu' },
-    { 'first_name': 'Evangeline', 'last_name': 'Burnsell', 'classroom_number': 2, 'phone_number': '(370) 8266285', 'email': 'eburnsell1@weebly.com' },
-    { 'first_name': 'Lilllie', 'last_name': 'Toman', 'classroom_number': 3, 'phone_number': '(414) 9833764', 'email': 'ltoman2@plala.or.jp' },
-    { 'first_name': 'Leela', 'last_name': 'Steeden', 'classroom_number': 4, 'phone_number': '(684) 7474722', 'email': 'lsteeden3@reverbnation.com' },
-    { 'first_name': 'Allsun', 'last_name': 'Edwicker', 'classroom_number': 5, 'phone_number': '(713) 8987154', 'email': 'aedwicker4@liveinternet.ru' },
-    { 'first_name': 'Aleta', 'last_name': 'Sainsbury-Brown', 'classroom_number': 6, 'phone_number': '(890) 9433779', 'email': 'asainsburybrown5@google.pl' },
-    { 'first_name': 'Marcia', 'last_name': 'Lafford', 'classroom_number': 7, 'phone_number': '(121) 5937127', 'email': 'mlafford6@vk.com' },
-    { 'first_name': 'Lorelle', 'last_name': 'Gagg', 'classroom_number': 8, 'phone_number': '(434) 5329287', 'email': 'lgagg7@bbb.org' },
-    { 'first_name': 'Eddy', 'last_name': 'Coil', 'classroom_number': 9, 'phone_number': '(858) 9616982', 'email': 'ecoil8@discovery.com' },
-    { 'first_name': 'Emelyne', 'last_name': 'Zelake', 'classroom_number': 10, 'phone_number': '(317) 7911570', 'email': 'ezelake9@alibaba.com' },
-    { 'first_name': 'Genny', 'last_name': 'Dugdale', 'classroom_number': 11, 'phone_number': '(284) 8422166', 'email': 'gdugdalea@shinystat.com' },
-    { 'first_name': 'Emmeline', 'last_name': 'Skones', 'classroom_number': 12, 'phone_number': '(198) 5946223', 'email': 'eskonesb@deviantart.com' },
-    { 'first_name': 'Bessie', 'last_name': 'Ballinghall', 'classroom_number': 13, 'phone_number': '(808) 4451061', 'email': 'bballinghallc@newsvine.com' },
-    { 'first_name': 'Ernaline', 'last_name': 'Thomton', 'classroom_number': 14, 'phone_number': '(635) 5445155', 'email': 'ethomtond@dedecms.com' },
-    { 'first_name': 'Myra', 'last_name': 'Dingivan', 'classroom_number': 15, 'phone_number': '(999) 7083503', 'email': 'mdingivane@cnbc.com' }
-  ];
+[
+  { 'firstName': 'Bel', 'lastName': 'Walworth', 'employeeId': 16910210, 'roomNumber': 1, 'email': 'bwalworth0@mozilla.org', 'phoneNumber': '(757) 5000513', 'streetAddress': '57732 Barnett Court', 'city': 'Virginia Beach', 'state': 'Virginia', 'zipcode': 86347 },
+  { 'firstName': 'Abbye', 'lastName': 'Conigsby', 'employeeId': 81824673, 'roomNumber': 2, 'email': 'aconigsby1@usgs.gov', 'phoneNumber': '(682) 8772394', 'streetAddress': '50211 Service Parkway', 'city': 'Fort Worth', 'state': 'Texas', 'zipcode': 53884 },
+  { 'firstName': 'Melvyn', 'lastName': 'Ambrozewicz', 'employeeId': 99570727, 'roomNumber': 3, 'email': 'mambrozewicz2@who.int', 'phoneNumber': '(302) 6968293', 'streetAddress': '62 Atwood Crossing', 'city': 'Wilmington', 'state': 'Delaware', 'zipcode': 53726 },
+  { 'firstName': 'Kaitlyn', 'lastName': 'Spurnier', 'employeeId': 70442633, 'roomNumber': 4, 'email': 'kspurnier3@dmoz.org', 'phoneNumber': '(518) 1572647', 'streetAddress': '069 Chinook Park', 'city': 'Albany', 'state': 'New York', 'zipcode': 76520 },
+  { 'firstName': 'Janene', 'lastName': 'Gonoude', 'employeeId': 48517602, 'roomNumber': 5, 'email': 'jgonoude4@ox.ac.uk', 'phoneNumber': '(804) 3471890', 'streetAddress': '78 Morning Drive', 'city': 'Richmond', 'state': 'Virginia', 'zipcode': 13164 },
+  { 'firstName': 'Anallise', 'lastName': 'Pulhoster', 'employeeId': 76441365, 'roomNumber': 6, 'email': 'apulhoster5@usgs.gov', 'phoneNumber': '(702) 5466465', 'streetAddress': '549 Ridgeway Lane', 'city': 'North Las Vegas', 'state': 'Nevada', 'zipcode': 21354 },
+  { 'firstName': 'Kerstin', 'lastName': 'Meus', 'employeeId': 20468657, 'roomNumber': 7, 'email': 'kmeus6@dyndns.org', 'phoneNumber': '(513) 1161602', 'streetAddress': '5259 Upham Parkway', 'city': 'Cincinnati', 'state': 'Ohio', 'zipcode': 52499 },
+  { 'firstName': 'Josh', 'lastName': 'Kid', 'employeeId': 72762251, 'roomNumber': 8, 'email': 'jkid7@wikia.com', 'phoneNumber': '(713) 3015296', 'streetAddress': '063 Bluestem Parkway', 'city': 'Houston', 'state': 'Texas', 'zipcode': 85157 },
+  { 'firstName': 'Ewen', 'lastName': 'Double', 'employeeId': 46909861, 'roomNumber': 9, 'email': 'edouble8@webmd.com', 'phoneNumber': '(702) 9434042', 'streetAddress': '08 Fairfield Drive', 'city': 'Las Vegas', 'state': 'Nevada', 'zipcode': 33805 },
+  { 'firstName': 'Ralina', 'lastName': 'MacNamara', 'employeeId': 30993840, 'roomNumber': 10, 'email': 'rmacnamara9@businessinsider.com', 'phoneNumber': '(434) 1867530', 'streetAddress': '54 Prentice Hill', 'city': 'Lynchburg', 'state': 'Virginia', 'zipcode': 61484 },
+  { 'firstName': 'Fin', 'lastName': 'Panchin', 'employeeId': 47760570, 'roomNumber': 11, 'email': 'fpanchina@chronoengine.com', 'phoneNumber': '(303) 8997288', 'streetAddress': '14013 Starling Crossing', 'city': 'Denver', 'state': 'Colorado', 'zipcode': 82208 },
+  { 'firstName': 'Stevena', 'lastName': 'Folan', 'employeeId': 18072385, 'roomNumber': 12, 'email': 'sfolanb@wikipedia.org', 'phoneNumber': '(617) 9935600', 'streetAddress': '22 Thierer Lane', 'city': 'Boston', 'state': 'Massachusetts', 'zipcode': 45055 },
+  { 'firstName': 'Molli', 'lastName': 'Hrishanok', 'employeeId': 20737921, 'roomNumber': 13, 'email': 'mhrishanokc@earthlink.net', 'phoneNumber': '(989) 2974090', 'streetAddress': '2 Toban Pass', 'city': 'Midland', 'state': 'Michigan', 'zipcode': 51697 },
+  { 'firstName': 'Worth', 'lastName': 'Fosken', 'employeeId': 80337070, 'roomNumber': 14, 'email': 'wfoskend@reverbnation.com', 'phoneNumber': '(702) 5217526', 'streetAddress': '2 Crest Line Drive', 'city': 'Las Vegas', 'state': 'Nevada', 'zipcode': 77817 },
+  { 'firstName': 'Anabel', 'lastName': 'Gelardi', 'employeeId': 14652112, 'roomNumber': 15, 'email': 'agelardie@google.it', 'phoneNumber': '(304) 6559863', 'streetAddress': '54725 Dunning Place', 'city': 'Huntington', 'state': 'West Virginia', 'zipcode': 60455 }
+];
 
 module.exports = teacherDataJSON;
