@@ -89,15 +89,21 @@ module.exports = (db) => {
       },
       include: [db.Teacher]
     }).then(function (dbStudent) {
-      // console.log(dbStudent);
-      res.render('parent_profile', {
-        studentData: dbStudent
+      return db.Parent.findOne({
+        where: {
+          id: id
+        }
+      }).then(function (dbParent) {
+        console.log('Data gathered');
+        console.log(dbStudent);
+        console.log(dbParent);
+        // res.render('parent_profile', user);
+        res.render('parent_profile', {
+          studentData: dbStudent,
+          parentData: dbParent
+        });
       });
-      // res.json(dbStudent);
     });
-    // } else {
-    //   res.render('register_student');
-    // }
   });
 
   // ***** ORIGINAL CODE BLOCK
