@@ -2,8 +2,8 @@
     <div class="content">
         <div class="grid-container">
             <ul class="tabs" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="parent-tabs">
-                <li class="tabs-title title-tab-green"><a href="#parent1" aria-selected="true" class="is-active">Parent Info</a></li>
-                <li class="tabs-title title-tab-blue"><a href="#parent2">Address</a></li>
+                <li class="tabs-title title-tab-green"><a href="#parent1" aria-selected="true" class="is-active">Contact Details</a></li>
+                <li id="parent-2" class="tabs-title title-tab-blue"><a href="#parent2">Address</a></li>
             </ul>
 
             <div class="tabs-content" data-tabs-content="parent-tabs">
@@ -13,28 +13,28 @@
                         <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="parentFirstName"><p>First Name</p></label>
-                            <input type="text" class="form-control" id="parentFirstName" value="{{parentData.firstName}}" placeholder="John">
+                            <input type="text" class="form-control" id="parentFirstName" placeholder="John">
                         </div>
                         </div>
 
                         <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="parentLastName"><p>Last Name</p></label>
-                            <input type="text" class="form-control" id="parentLastName" value="{{parentData.lastName}}" placeholder="Doe">
+                            <input type="text" class="form-control" id="parentLastName" placeholder="Doe">
                         </div>
                         </div>
 
                         <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="email"><p>Email Address</p></label>
-                            <input type="text" class="form-control" id="email" value="{{parentData.email}}" placeholder="me@yahoo.com">
+                            <input type="text" class="form-control" id="email" placeholder="me@yahoo.com">
                         </div>
                         </div>
 
                         <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="parentPhoneNumber"><p>Phone Number</p></label>
-                            <input type="text" class="form-control" id="parentPhoneNumber" value="{{parentData.phoneNumber}}" placeholder="(919) 999-9999">
+                            <input type="text" class="form-control" id="parentPhoneNumber" placeholder="(919) 999-9999">
                         </div>
                         </div>
 
@@ -47,34 +47,34 @@
                         <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="streetAddress">Street Address</label>
-                            <input type="text" class="form-control" id="streetAddress" value="{{parentData.streetAddress}}" placeholder="311 Main Street">
+                            <input type="text" class="form-control" id="streetAddress" placeholder="311 Main Street">
                         </div>
                         </div>
 
                         <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="city">City</label>
-                            <input type="text" class="form-control" id="city" value="{{parentData.city}}" placeholder="Durham">
+                            <input type="text" class="form-control" id="city" placeholder="Durham">
                         </div>
                         </div>
 
                         <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="state">State</label>
-                            <input type="text" class="form-control" id="state" value="{{parentData.state}}" placeholder="NC">
+                            <input type="text" class="form-control" id="state" placeholder="NC">
                         </div>
                         </div>
                         <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="zipcode">Zip Code</label>
-                            <input type="text" class="form-control" id="zipcode" value="{{parentData.zipcode}}" placeholder="27713">
+                            <input type="text" class="form-control" id="zipcode" placeholder="27713">
                         </div>
                         </div>
 
                         <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="custodyRelation">What is your relationship to the child?</label>
-                            <input type="text" class="form-control" id="custodyRelation" value="{{parentData.custodyRelation}}" placeholder="Mother / Grandparent">
+                            <input type="text" class="form-control" id="custodyRelation" placeholder="Mother / Grandparent">
                         </div>
                         </div>
                         

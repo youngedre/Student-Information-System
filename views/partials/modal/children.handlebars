@@ -27,16 +27,23 @@
       <tr class="table-expand-row-content">
         <td colspan="8" class="table-expand-row-nested">
             <div class="grid-container">
-        <ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="my-children-tabs">
-          <li class="tabs-title is-active"><a href="#panel-1{{id}}" aria-selected="true">General</a></li>
-          <li class="tabs-title title-tab-red"><a href="#panel-2{{id}}">Emergency Info</a></li>
-          <li class="tabs-title"><a href="#panel-3{{id}}">Allergies</a></li>
-          <li class="tabs-title"><a href="#panel-4{{id}}">Notes</a></li>
+        <ul class="tabs" 
+            data-deep-link="true" 
+            data-update-history="true" 
+            data-deep-link-smudge="true" 
+            data-deep-link-smudge-delay="500" 
+            data-tabs 
+            id="my-children-tabs">
+
+          <li class="tabs-title "><a href="#panel-1{{id}}" aria-selected="true">General</a></li>
+          <li class="tabs-title title-tab-red my-children-e"><a href="#panel-2{{id}}">Emergency Info</a></li>
+          <li class="tabs-title my-children-a"><a href="#panel-3{{id}}">Allergies</a></li>
+          <li class="tabs-title my-children-n"><a href="#panel-4{{id}}">Notes</a></li>
         </ul>
 
 <div class="tabs-content" data-tabs-content="my-children-tabs">
   <!-- Section 1: panel 1 -->
-  <div class="tabs-panel is-active" id="#panel-1{{id}}">
+  <div class="tabs-panel is-active panel-1" id="panel-1{{id}}">
      <form id= "create-form">
         <div class="form-row">
           <div class="form-group col-md-12">
@@ -87,7 +94,7 @@
     </form>
   </div>
   <!-- Section 2: panel 2 -->
-  <div class="tabs-panel" id="#panel-2{{id}}">
+  <div class="tabs-panel" id="panel-2{{id}}">
     <form>
     <div class="form-row">
           <div class="form-group col-md-12">
@@ -140,7 +147,7 @@
     </form>
    </div>
   <!-- Section 3: panel 3 -->
-  <div class="tabs-panel" id="#panel-3{{id}}">
+  <div class="tabs-panel" id="panel-3{{id}}">
     <form>
      <div class="form-row">
           <div class="form-group col-md-12">
@@ -168,7 +175,7 @@
     </form>
   </div>
   <!-- Section 4: 4 --> 
-  <div class="tabs-panel" id="#panel-4{{id}}">
+  <div class="tabs-panel" id="panel-4{{id}}">
      <form>
      <div class="form-row">
           <div class="form-group col-md-12">
