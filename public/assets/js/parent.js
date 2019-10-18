@@ -7,8 +7,8 @@ $('#my-children-tabs').foundation();
 
 
 /* Hidden elements */
-
-$('#add-parent').show();
+$('#my-profile').show();
+$('#add-parent').hide();
 $('#parent-mail').hide();
 $('#add-child').hide();
 $('#myChildren').hide();
@@ -89,21 +89,3 @@ $('#child-a').on('click', function(){
 $('#child-n').on('click', function(){
   $('#child-general').removeClass('is-active'); 
 })
-
-/* On click events to prevent duplicate data for children data table tabs*/
-var kids = $('.my-children-e');
-// var kids = $('.my-children-e');
-var panel1 = $('.panel-1');
-var panel2 = $('.panel-2');
-var panel3 = $('.panel-3');
-var panel4= $('.panel-4');
-for (var i = 0; i < 1; i++){
-    kids.on('click', function(){
-     
-        panel1.removeClass('is-active');
-        console.log("remove a class")
-    
-})
-}
-// console.log(kids)
-console.log(panel1.length)
