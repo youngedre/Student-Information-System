@@ -36,6 +36,12 @@ module.exports = function (db) {
       db.Teacher.create(req.body).then(function (dbTeacher) {
         res.json(dbTeacher);
       });
+    },
+    // Create new approved pickup entry
+    addNewPickup: function (req, res) {
+      db.Approved.create(req.body).then(function (dbApproved) {
+        res.json(dbApproved);
+      });
     }
 
   };

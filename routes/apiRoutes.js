@@ -21,6 +21,7 @@ module.exports = (passport, db) => {
   router.post('/newStudent', AppController.addNewStudent);
   router.post('/newParent', AppController.addNewParent);
   router.post('/newTeacher', AppController.addNewTeacher);
+  router.post('/newPickup', AppController.addNewPickup);
 
   return router;
 };
