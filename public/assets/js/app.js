@@ -289,3 +289,5 @@ $('#offCanvasLeft1').foundation();
 //     console.log(data);
 //   });
 // });
+
+$('.sticky-topbar').foundation();

@@ -5,10 +5,11 @@
       <table id="student-data" class="table-expand">
         <thead>
           <tr class="table-expand-row">
-            <th width="200">Children</th>
-            <th>Teachers</th>
-            <th>Teacher Contact</th>
-            <th width="150">Update Profile</th>
+            <th style="width: 100px">Profile Photo</th>
+            <th style="width: 100px">Children</th>
+            <th style="width: 100px">Teacher</th>
+            <th style="width: 100px">Teacher Contact</th>
+            <th style="width: 100px">Update Profile</th>
           </tr>
         </thead>
 
@@ -16,28 +17,27 @@
           {{#each studentData}}
 
           <tr class="table-expand-row" data-open-details id="existingStudentData">
+             <td><img class="student-photo" src="/static-files/assets/images/stock_images/{{imageLink}}"></img></td>
             <td>{{firstName}} {{lastName}}</td>
-            <td><img src="/static-files/assets/images/stock_images/{{imageLink}}"></img></td>
-            <td class="text-right">Teacher's Contact</td>
+            <td style="width: 100px">Teacher</td>
+            <td>Teacher's Contact</td>
             <td><span class="expand-icon">Click to Update</span></td>
           </tr>
 
        
-
       <tr class="table-expand-row-content">
         <td colspan="8" class="table-expand-row-nested">
             <div class="grid-container">
         <ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="my-children-tabs">
-          <li class="tabs-title is-active"><a href="#panel5d" aria-selected="true">General</a></li>
-          <li class="tabs-title"><a href="#panel6d">Emergency Info</a></li>
-          <li class="tabs-title"><a href="#panel7d">Allergies</a></li>
-          <li class="tabs-title"><a href="#panel8d">Notes</a></li>
+          <li class="tabs-title is-active"><a href="#panel-1{{id}}" aria-selected="true">General</a></li>
+          <li class="tabs-title title-tab-red"><a href="#panel-2{{id}}">Emergency Info</a></li>
+          <li class="tabs-title"><a href="#panel-3{{id}}">Allergies</a></li>
+          <li class="tabs-title"><a href="#panel-4{{id}}">Notes</a></li>
         </ul>
-
 
 <div class="tabs-content" data-tabs-content="my-children-tabs">
   <!-- Section 1: panel 1 -->
-  <div class="tabs-panel is-active" id="panel5d">
+  <div class="tabs-panel is-active" id="#panel-1{{id}}">
      <form id= "create-form">
         <div class="form-row">
           <div class="form-group col-md-12">
@@ -88,7 +88,7 @@
     </form>
   </div>
   <!-- Section 2: panel 2 -->
-  <div class="tabs-panel" id="panel6d">
+  <div class="tabs-panel" id="#panel-2{{id}}">
     <form>
     <div class="form-row">
           <div class="form-group col-md-12">
@@ -141,7 +141,7 @@
     </form>
    </div>
   <!-- Section 3: panel 3 -->
-  <div class="tabs-panel" id="panel7d">
+  <div class="tabs-panel" id="#panel-3{{id}}">
     <form>
      <div class="form-row">
           <div class="form-group col-md-12">
@@ -169,7 +169,7 @@
     </form>
   </div>
   <!-- Section 4: 4 --> 
-  <div class="tabs-panel" id="panel8d">
+  <div class="tabs-panel" id="#panel-4{{id}}">
      <form>
      <div class="form-row">
           <div class="form-group col-md-12">
