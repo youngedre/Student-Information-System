@@ -74,13 +74,9 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: false
       }
     });
-  };
-  Student.associate = function (models) {
     Student.belongsTo(models.Parent,
       { constraints: false }
     );
-  };
-  Student.associate = (models) => {
     Student.belongsToMany(models.Approved, {
       through: 'StudentApprovedPickup',
       as: 'approvedPickup',
