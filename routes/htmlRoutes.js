@@ -1,3 +1,4 @@
+/* eslint-disable no-redeclare */
 /* eslint-disable no-var */
 const router = require('express').Router();
 
@@ -87,8 +88,6 @@ module.exports = (db) => {
         ParentId: id
       },
       include: [db.Teacher]
-      // as: 'Teacher',
-      // where: { id: db.Student.TeacherId }
     }).then(function (dbStudent) {
       // console.log(dbStudent);
       res.render('parent_profile', {
@@ -101,17 +100,36 @@ module.exports = (db) => {
     // }
   });
 
+  // ***** ORIGINAL CODE BLOCK
+  // router.get('/teacher/:id?', (req, res) => {
+  //   if (req.isAuthenticated()) {
+  //     const user = {
+  //       user: req.session.passport.user,
+  //       isloggedin: req.isAuthenticated()
+  //     };
+  //     res.render('teacher_profile', user);
+  //   } else {
+  //     res.render('teacher_profile');
+  //   }
+  // });
+
   // Load teacher page
-  router.get('/teacher/:id?', (req, res) => {
-    if (req.isAuthenticated()) {
-      const user = {
-        user: req.session.passport.user,
-        isloggedin: req.isAuthenticated()
-      };
-      res.render('teacher_profile', user);
+  router.get('/teacher', (req, res) => {
+    if (req.params.id) {
+      var id = req.params.id;
     } else {
-      res.render('teacher_profile');
+      var id = 11;
     }
+    db.Student.findAll({
+      where: {
+        TeacherId: id
+      }
+    }).then(function (dbClassRoster) {
+      // res.render('teacher_profile', user);
+      res.render('teacher_profile', {
+        classRosterData: dbClassRoster
+      });
+    });
   });
 
   // Load dashboard page
@@ -126,21 +144,6 @@ module.exports = (db) => {
       res.render('dashboard');
     }
   });
-
-  // router.get('/parent#panel4d', function (req, res) {
-  //   if (req.params.id) {
-  //     var id = req.params.id;
-  //   } else {
-  //     id = 32;
-  //   }
-  //   db.Student.findAll({
-  //     where: {
-  //       id: id
-  //     }
-  //   }).then(function (dbStudent) {
-  //     // res.json(dbStudent);
-  //     res.render('/parent#panel4d', dbStudent);
-  // });
 
   // Load example index page
   router.get('/example', function (req, res) {

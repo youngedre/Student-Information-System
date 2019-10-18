@@ -19,12 +19,11 @@
           <tr class="table-expand-row" data-open-details id="existingStudentData">
              <td><img class="student-photo" src="/static-files/assets/images/stock_images/{{imageLink}}"></img></td>
             <td>{{firstName}} {{lastName}}</td>
-            <td style="width: 100px">Teacher</td>
-            <td>Teacher's Contact</td>
+            <td style="width: 100px">{{Teacher.first_name}} {{Teacher.last_name}}</td>
+            <td>{{Teacher.email}}</td>
             <td><span class="expand-icon">Click to Update</span></td>
           </tr>
 
-       
       <tr class="table-expand-row-content">
         <td colspan="8" class="table-expand-row-nested">
             <div class="grid-container">
