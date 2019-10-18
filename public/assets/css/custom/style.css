@@ -535,7 +535,7 @@ background: #FFFDF5!important;
   }
 
   .title-tab-blue> a:hover, .title-tab-blue > a[aria-selected='true']{
-    background-color: #F7CD1C; 
+    background-color: #71960C; 
     color: #FFFDF5; 
   }
 
@@ -572,3 +572,5 @@ background: #FFFDF5!important;
   color:#FFFDF5;
   font-weight: bold; 
 }
+
+
