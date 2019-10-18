@@ -10,274 +10,223 @@
             <th style="width: 100px">Parent's Name</th>
             <th style="width: 100px">Parent's Contact</th>
             <th style="width: 100px">Expand Data</th>
-{{!-- 
-
-            <th width="200">Child's Name</th>
-            <th>Parent's Name</th>
-            <th>Parent's Contact</th>
-            <th width="150">Expand Data</th> --}}
           </tr>
         </thead>
 
-        <tbody>
-          {{#each classRosterData}}
+        <tbody
+            data-deep-link="true" 
+            data-update-history="true" 
+            data-deep-link-smudge="true" 
+            data-deep-link-smudge-delay="500" 
+            data-tabs 
+            id="class-roster">
+            
+            {{#each classRosterData}}
 
-          <tr class="table-expand-row" data-open-details id="existingStudentData">
-            <td><img class="student-photo" src="/static-files/assets/images/stock_images/{{imageLink}}"></img></td>
-            <td>{{firstName}} {{lastName}}</td>
-            <td>{{Parent.firstName}} {{Parent.lastName}}</td>
-            <td>{{Parent.phoneNumber}}</td>
-            <td><span class="expand-icon">Click to View</span></td>
-          </tr>
+            <tr class="table-expand-row" data-open-details>
+                <td><img class="student-photo" src="/static-files/assets/images/stock_images/{{imageLink}}"></img></td>
+                <td>{{firstName}} {{lastName}}</td>
+                <td>{{Parent.firstName}} {{Parent.lastName}}</td>
+                <td>{{Parent.phoneNumber}}</td>
+                <td><span class="expand-icon">Click to View</span></td>
+            </tr>
 
-      <tr class="table-expand-row-content">
-        <td colspan="8" class="table-expand-row-nested">
-            <div class="grid-container">
-        {{!-- <ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="my-children-tabs"> --}}
-          <li class="tabs-title is-active"><a href="#panel5d" aria-selected="true">Student Info</a></li>
-          <li class="tabs-title title-tab-"><a href="#panel6d">Emergency Info</a></li>
-          <li class="tabs-title"><a href="#panel7d">Allergies</a></li>
-          <li class="tabs-title"><a href="#panel8d">Notes</a></li>
-          <li class="tabs-title"><a href="#panel9d">Parent Info</a></li>
-          <li class="tabs-title"><a href="#panel10d">Address</a></li>
-        </ul>
+            <tr class="table-expand-row-content">
+                <td colspan="8" class="table-expand-row-nested">
+                    <div class="grid-container">
+                        <ul class="tabs">
+                            <li class="tabs-title is-active"><a href="#student-info-{{id}}" aria-selected="true">Student Info</a></li>
+                            <li class="tabs-title title-tab-"><a href="#emergency-{{id}}">Emergency Contacts</a></li>
+                            <li class="tabs-title"><a href="#allergies-{{id}}">Allergies</a></li>
+                            <li class="tabs-title"><a href="#notes-{{id}}">Notes</a></li>
+                            <li class="tabs-title"><a href="#parent-{{id}}">Parent Info</a></li>
+                        </ul>
 
-        <div class="tabs-content" data-tabs-content="my-children-tabs">
-        <!-- Section 1: panel 1 -->
-        <div class="tabs-panel is-active" id="panel5d">
-            <form id= "create-form">
-                <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="studentFirstName">First Name</label>
-                    <input type="text" class="form-control" id="studentFirstName" value="{{firstName}}">
-                </div>
-                </div>
+                        <div class="tabs-content" data-tabs-content="class-roster">
+                            <!-- Section 1: Student Info -->
+                            <div class="tabs-panel" id="student-info-{{id}}">
+                                <form id= "create-form">
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="studentFirstName-{{id}}">First Name</label>
+                                        <input type="text" class="form-control" id="studentFirstName-{{id}}" value="{{firstName}}">
+                                    </div>
+                                    </div>
 
-                <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="studentLastName">Last Name</label>
-                    <input type="text" class="form-control" id="studentLastName" value="{{lastName}}">
-                </div>
-                </div>
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="studentLastName-{{id}}">Last Name</label>
+                                        <input type="text" class="form-control" id="studentLastName-{{id}}" value="{{lastName}}">
+                                    </div>
+                                    </div>
 
-                <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="studentBirthDate">Birthdate (Format: YYYY-MM-DD)</label>
-                    <input type="text" class="form-control" id="studentBirthDate" value="{{birthDate}}">
-                </div>
-                </div>
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="studentBirthDate-{{id}}">Birthdate (Format: YYYY-MM-DD)</label>
+                                        <input type="text" class="form-control" id="studentBirthDate-{{id}}" value="{{birthDate}}">
+                                    </div>
+                                    </div>
 
-                <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="studentGender">Gender</label>
-                    <input type="text" class="form-control" id="studentGender" value="{{gender}}">
-                </div>
-                </div>
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="studentGender-{{id}}">Gender</label>
+                                        <input type="text" class="form-control" id="studentGender-{{id}}" value="{{gender}}">
+                                    </div>
+                                    </div>
 
-                <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="studentEthnicity">Ethnicity</label>
-                    <input type="text" class="form-control" id="studentEthnicity" value="{{ethnicity}}">
-                </div>
-                </div>
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="studentEthnicity-{{id}}">Ethnicity</label>
+                                        <input type="text" class="form-control" id="studentEthnicity-{{id}}" value="{{ethnicity}}">
+                                    </div>
+                                    </div>
 
-                <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="studentLanguage">What language do you speak at home?</label>
-                    <input type="text" class="form-control" id="studentLanguage" value="{{primaryLanguage}}">
-                </div>
-                </div>
-            </form>
-        </div>
-        <!-- Section 2: panel 2 -->
-        <div class="tabs-panel" id="panel6d">
-            <form>
-            <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="emergencyContactName">Emergency Contact Name</label>
-                    <input type="text" class="form-control" id="emergencyContactName" value="{{emergencyContactName}}">
-                </div>
-                </div>
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="studentLanguage-{{id}}">What language do you speak at home?</label>
+                                        <input type="text" class="form-control" id="studentLanguage-{{id}}" value="{{primaryLanguage}}">
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Section 2: Emergency Contacts -->
+                            <div class="tabs-panel" id="emergency-{{id}}">
+                                <form>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="emergencyContactName-{{id}}">Emergency Contact Name</label>
+                                        <input type="text" class="form-control" id="emergencyContactName-{{id}}" value="{{emergencyContactName}}">
+                                    </div>
+                                    </div>
 
-                <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="emergencyContactPhone">Emergency Contact Phone Number</label>
-                    <input type="text" class="form-control" id="emergencyContactPhone" value="{{emergencyContactPhone}}">
-                </div>
-                </div>
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="emergencyContactPhone-{{id}}">Emergency Contact Phone Number</label>
+                                        <input type="text" class="form-control" id="emergencyContactPhone-{{id}}" value="{{emergencyContactPhone}}">
+                                    </div>
+                                    </div>
 
-                <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="emergencyContactRelation">Emergency Contact Relationship</label>
-                    <input type="text" class="form-control" id="emergencyContactRelation" value="{{emergencyContactRelation}}">
-                </div>
-                </div>
-                <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="doctorName">Doctor's Name</label>
-                    <input type="text" class="form-control" id="doctorName" value="{{doctorName}}">
-                </div>
-                </div>
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="emergencyContactRelation-{{id}}">Emergency Contact Relationship</label>
+                                        <input type="text" class="form-control" id="emergencyContactRelation-{{id}}" value="{{emergencyContactRelation}}">
+                                    </div>
+                                    </div>
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="doctorName-{{id}}">Doctor's Name</label>
+                                        <input type="text" class="form-control" id="doctorName-{{id}}" value="{{doctorName}}">
+                                    </div>
+                                    </div>
 
-                <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="doctorPhone">Doctor's Phone Number</label>
-                    <input type="text" class="form-control" id="doctorPhone" value="{{doctorPhone}}">
-                </div>
-                </div>
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="doctorPhone-{{id}}">Doctor's Phone Number</label>
+                                        <input type="text" class="form-control" id="doctorPhone-{{id}}" value="{{doctorPhone}}">
+                                    </div>
+                                    </div>
 
-                <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="dentistName">Dentist's Name</label>
-                    <input type="text" class="form-control" id="dentistName" value="{{dentistName}}">
-                </div>
-                </div>
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="dentistName-{{id}}">Dentist's Name</label>
+                                        <input type="text" class="form-control" id="dentistName-{{id}}" value="{{dentistName}}">
+                                    </div>
+                                    </div>
 
-                <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="dentistPhone">Dentist's Phone Number</label>
-                    <input type="text" class="form-control" id="dentistPhone" value="{{dentistPhone}}">
-                </div>
-                </div>
-            </form>
-        </div>
-        <!-- Section 3: panel 3 -->
-        <div class="tabs-panel" id="panel7d">
-            <form>
-            <div class="form-row">
-                <div class="form-group col-md-12">
-                    <div class="grid-x grid-padding-x">
-                <fieldset>
-                    <legend>Does Your child have any allergies?</legend>
-                    <input type="checkbox" name="confirm-allergies" value="yes" id="confirm-allergies-yes"><label for="confirm-allergies-yes">Yes</label>
-                    <input type="checkbox" name="confirm-allergies" value="no" id="confirm-allergies-no"><label for="confirm-allergies-no">No</label>
-                </fieldset>
-                </div>
-                
-                    <label for="allergyDescription">Allergies (if any)</label>
-                    <input type="text" class="form-control" id="allergyDescription" value="{{allergyDescription}}">
-                </div>
-                </div>
-                <div class="grid-x grid-padding-x">
-                <fieldset>
-                    <legend>If you answered yes, how severe are your child's allergies? (1 = severe 3 = mild)</legend>
-                    <input type="radio" name="allergies" value="life-threatening" id="life-threatening"><label for="life-threatening">life Threatening</label>
-                    <input type="radio" name="allergies" value="Blue" id="Severe"><label for="Severe">Severe</label>
-                    <input type="radio" name="allergies" value="Yellow" id="Moderate"><label for="Moderate">Moderate</label>
-                </fieldset>
-                </div>
-            </form>
-        </div>
-        <!-- Section 4: 4 --> 
-        <div class="tabs-panel" id="panel8d">
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="parent-notes"></label>
-                        <div class="large-12 columns">
-                            <fieldset>
-                                <legend>Additional notes for the teacher. </legend>
-                                <textarea>{{notes}}</textarea>
-                            </fieldset>
+                                    <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="dentistPhone-{{id}}">Dentist's Phone Number</label>
+                                        <input type="text" class="form-control" id="dentistPhone-{{id}}" value="{{dentistPhone}}">
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Section 3: Allergies -->
+                            <div class="tabs-panel" id="allergies-{{id}}">
+                                <form>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <div class="grid-x grid-padding-x">
+                                    <fieldset>
+                                        <legend>Does Your child have any allergies?</legend>
+                                        <input type="checkbox" name="confirm-allergies" value="yes" id="confirm-allergies-yes-{{id}}"><label for="confirm-allergies-yes-{{id}}">Yes</label>
+                                        <input type="checkbox" name="confirm-allergies-{{id}}" value="no" id="confirm-allergies-no-{{id}}"><label for="confirm-allergies-no">No</label>
+                                    </fieldset>
+                                    </div>
+                                    
+                                        <label for="allergyDescription-{{id}}">Allergies (if any)</label>
+                                        <input type="text" class="form-control" id="allergyDescription-{{id}}" value="{{allergyDescription}}">
+                                    </div>
+                                    </div>
+                                    <div class="grid-x grid-padding-x">
+                                    <fieldset>
+                                        <legend>If you answered yes, how severe are your child's allergies? (1 = severe 3 = mild)</legend>
+                                        <input type="radio" name="allergies" value="life-threatening" id="life-threatening-{{id}}"><label for="life-threatening-{{id}}">life Threatening</label>
+                                        <input type="radio" name="allergies" value="Blue" id="Severe-{{id}}"><label for="Severe-{{id}}">Severe</label>
+                                        <input type="radio" name="allergies" value="Yellow" id="Moderate-{{id}}"><label for="Moderate-{{id}}">Moderate</label>
+                                    </fieldset>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Section 4: Notes --> 
+                            <div class="tabs-panel" id="notes-{{id}}">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="parent-notes"></label>
+                                            <div class="large-12 columns">
+                                                <fieldset>
+                                                    <legend>Additional notes for the teacher. </legend>
+                                                    <textarea>{{notes}}</textarea>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>  
+                            </div>
+                            <!-- Section 5: Parent Info --> 
+                            <div class="tabs-panel" id="parent-{{id}}">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="parentFirstName-{{id}}">Parent's First Name</label>
+                                            <input type="text" class="form-control" id="parentFirstName-{{id}}" value="{{Parent.firstName}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="parentLastName-{{id}}">Parent's Last Name</label>
+                                            <input type="text" class="form-control" id="parentLastName-{{id}}" value="{{Parent.lastName}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="email-{{id}}">Parent's Email Address</label>
+                                            <input type="text" class="form-control" id="email-{{id}}" value="{{Parent.email}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="parentPhoneNumber-{{id}}">Parent's Phone Number</label>
+                                            <input type="text" class="form-control" id="parentPhoneNumber-{{id}}" value="{{Parent.phoneNumber}}">
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
                         </div>
-                    </div>
-                </div>
-            </form>  
-        </div>
-        <!-- Section 5: 5 --> 
-        <div class="tabs-panel" id="panel9d">
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="parentFirstName">Parent's First Name</label>
-                        <input type="text" class="form-control" id="parentFirstName" value="{{Parent.firstName}}">
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="parentLastName">Parent's Last Name</label>
-                        <input type="text" class="form-control" id="parentLastName" value="{{Parent.lastName}}">
                     </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="email">Parent's Email Address</label>
-                        <input type="text" class="form-control" id="email" value="{{Parent.email}}">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="parentPhoneNumber">Parent's Phone Number</label>
-                        <input type="text" class="form-control" id="parentPhoneNumber" value="{{Parent.phoneNumber}}">
-                    </div>
-                </div>
-
-            </form>
-        </div>
-                <!-- Section 6: 6 --> 
-        <div class="tabs-panel" id="panel10d">
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="streetAddress">Street Address</label>
-                        <input type="text" class="form-control" id="streetAddress" value="{{Parent.streetAddress}}">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="city">City</label>
-                        <input type="text" class="form-control" id="city" value="{{Parent.city}}">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="state">State</label>
-                        <input type="text" class="form-control" id="state" value="{{Parent.state}}">
-                    </div>
-                </div>
-                    
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="zipcode">Zip Code</label>
-                        <input type="text" class="form-control" id="zipcode" value="{{Parent.zipcode}}">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="custodyRelation">What is your relationship to the child?</label>
-                        <input type="text" class="form-control" id="custodyRelation" value="{{Parent.custodyRelation}}">
-                    </div>
-                </div>
-                    
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <div class="grid-x grid-padding-x">
-                        <fieldset>
-                            <legend>Does your child live with you?</legend>
-                            <input type="checkbox" name="livingWith" value="yes" id="livingWith"><label for="livingWith-yes">Yes</label>
-                            <input type="checkbox" name="livingWith" value="no" id="livingWith"><label for="livingWith-no">No</label>
-                        </fieldset>
-                        </div>
-                    </div>
-                </div>
-            </form>  
-        </div>
-  
-</div>
-
-</div>
-        </td>
-      </tr>
-         {{/each}}
-    </tbody>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
     
-  </table> <!-- End of table -->
+      </table> <!-- End of table -->
     </div>
   </div>
 </section>
