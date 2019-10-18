@@ -7,7 +7,7 @@
     "start": "node server.js",
     "lint": "eslint . --ext .js --quiet",
     "fix": "eslint --fix .",
-    "test": "npm run lint && cross-env NODE_ENV=test AUTH_SECRET=test TU=root mocha -ui bdd --reporter spec --exit",
+    "test": "npm run lint && cross-env NODE_ENV=test mocha -ui bdd --reporter spec --exit",
     "local-test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
   },
   "repository": {
@@ -57,6 +57,7 @@
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
     "cross-env": "^5.2.0",
+    "eslint": "^6.5.1",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
   }
