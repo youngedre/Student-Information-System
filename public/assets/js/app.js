@@ -20,7 +20,7 @@ function addImage () {
     'prince.jpeg',
     'sesame_street_2.jpeg',
     'sesame_street_3.jpeg',
-    'sesame_street_4.jpeg',
+    'sesame_street_4.png',
     'sesame_street_5.jpeg',
     'tigger.jpeg',
     'winnie.jpeg'
@@ -265,6 +265,34 @@ $('#add-new-parent').on('click', function () {
     data: newParentData
   }).then(function () {
     console.log('New Parent Added');
+  });
+});
+
+// Functionality to add a new teacher
+$('#add-new-teacher').on('click', function () {
+  // Create an object with all of the new teacher data that will be exported to database
+  var newTeacherData = {
+    firstName: $('#firstName').val().trim(),
+    lastName: $('#lastName').val().trim(),
+    employeeId: $('#employeeId').val().trim(),
+    roomNumber: $('#roomNumber').val().trim(),
+    email: $('#email').val().trim(),
+    phoneNumber: $('#phoneNumber').val().trim(),
+    streetAddress: $('#streetAddress').val().trim(),
+    city: $('#city').val().trim(),
+    state: $('#state').val().trim(),
+    zipcode: $('#zipcode').val().trim()
+  };
+  // For testing purposes:
+  console.log(newTeacherData);
+
+  // POST request to add new student data to the database
+  $.ajax({
+    type: 'POST',
+    url: '/api/newTeacher',
+    data: newTeacherData
+  }).then(function () {
+    console.log('New Teacher Added');
   });
 });
 
