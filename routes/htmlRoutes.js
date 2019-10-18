@@ -71,7 +71,7 @@ module.exports = (db) => {
   });
 
   // Load parent page
-  router.get('/parent', (req, res) => {
+  router.get('/parent/:id?', (req, res) => {
     // if (req.isAuthenticated()) {
     //   const user = {
     //     user: req.session.passport.user,
