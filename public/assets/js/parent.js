@@ -92,6 +92,11 @@ $('#new-student-medical-info').on('click', function(){
 
 $('#new-student-allergy').on('click', function(){
   $('#child-allergies').removeClass('is-active'); 
+  $('#child-approved-pickup').addClass('is-active'); 
+})
+
+$('#new-student-pickup-info').on('click', function(){
+  $('#child-approved-pickup').removeClass('is-active'); 
   $('#child-notes').addClass('is-active'); 
 })
 
