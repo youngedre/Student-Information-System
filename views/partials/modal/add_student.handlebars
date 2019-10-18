@@ -13,6 +13,7 @@
         <li class="tabs-title"><a href="#child-general" aria-selected="true" class="is-active">General</a></li>
         <li id="child-e" class="tabs-title"><a href="#child-emergency">Emergency Information</a></li>
         <li id="child-a" class="tabs-title"><a href="#child-allergies">Allergies</a></li>
+        <li id="child-p" class="tabs-title"><a href="#child-approved-pickup">Approved Pickup</a></li>
         <li id="child-n" class="tabs-title"><a href="#child-notes">Notes</a></li>
 
       </ul>
@@ -154,7 +155,43 @@
             <a type="submit" id="new-student-allergy" class="button expanded">Next</a>
           </form>
         </div>
-        <!-- Section 4: Notes --> 
+
+        <!-- Section 4: Approved Pickup -->
+        <div class="tabs-panel" id="child-approved-pickup">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="pickupFirstName">Approved Pickup: First Name</label>
+                <input type="text" class="form-control" id="pickupFirstName" placeholder="John">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="pickupLastName">Approved Pickup: Last Name</label>
+                <input type="text" class="form-control" id="pickupLastName" placeholder="Doe">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="pickupPhoneNumber">Approved Pickup: Phone Number</label>
+                <input type="text" class="form-control" id="pickupPhoneNumber" placeholder="(919) 999-9999">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="pickupRelation">Approved Pickup: Relation to Student</label>
+                <input type="text" class="form-control" id="pickupRelation" placeholder="Grandparent / Babysitter">
+              </div>
+            </div>
+
+            <a type="submit" id="new-student-pickup-info" class="button expanded">Next</a>
+          </form>
+        </div>
+
+        <!-- Section 5: Notes --> 
         <div class="tabs-panel" id="child-notes">
           <form>
             <div class="form-row">

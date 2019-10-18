@@ -23,11 +23,16 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
   Approved.associate = (models) => {
-    Approved.belongsToMany(models.Student, {
-      through: 'StudentApprovedPickup',
-      as: 'students',
-      foreignKey: 'approvedPickupId'
-    });
+    Approved.hasMany(models.Student);
   };
   return Approved;
 };
+
+// For future implementation
+// Approved.associate = (models) => {
+//   Approved.belongsToMany(models.Student, {
+//     through: 'StudentApprovedPickup',
+//     as: 'students',
+//     foreignKey: 'approvedPickupId'
+//   });
+// };

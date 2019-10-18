@@ -219,8 +219,17 @@ $('#add-new-student').on('click', function () {
     imageLink: addImage(),
     TeacherId: Math.floor(Math.random() * 15) + 1
   };
+
+  var newPickupData = {
+    firstName: $('#pickupFirstName').val().trim(),
+    lastName: $('#pickupLastName').val().trim(),
+    phoneNumber: $('#pickupPhoneNumber').val().trim(),
+    relation: $('#pickupRelation').val().trim()
+  };
+
   // For testing purposes:
   console.log(newStudentData);
+  console.log(newPickupData);
 
   // POST request to add new student data to the database
   $.ajax({
@@ -229,6 +238,13 @@ $('#add-new-student').on('click', function () {
     data: newStudentData
   }).then(function () {
     console.log('New Student Added');
+    $.ajax({
+      type: 'POST',
+      url: '/api/newPickup',
+      data: newPickupData
+    }).then(function () {
+      console.log('New Pickup Added');
+    });
   });
 });
 

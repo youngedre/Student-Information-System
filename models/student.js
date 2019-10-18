@@ -77,15 +77,19 @@ module.exports = function (sequelize, DataTypes) {
     Student.belongsTo(models.Parent,
       { constraints: false }
     );
-    Student.belongsToMany(models.Approved, {
-      through: 'StudentApprovedPickup',
-      as: 'approvedPickup',
-      foreignKey: 'studentId'
-    });
+    Student.belongsTo(models.Approved,
+      { constraints: false }
+    );
   };
   return Student;
 };
 
+// Save for possible future addition:
+// Student.belongsToMany(models.Approved, {
+//   through: 'StudentApprovedPickup',
+//   as: 'approvedPickup',
+//   foreignKey: 'studentId'
+// });
 // Possible additions ---
 // Computer access: true or false
 // permission to pick-up
