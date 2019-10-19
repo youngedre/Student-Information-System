@@ -21,6 +21,22 @@ module.exports = (db) => {
     isAdmin: false,
     parentTeacher: 'parent'
   });
+  db.User.create({
+    firstName: 'Damita',
+    lastName: 'Chessell',
+    email: 'parent@parent.com',
+    password: process.env.USER_PWD,
+    isAdmin: false,
+    parentTeacher: 'parent'
+  });
+  db.User.create({
+    firstName: 'Anallise',
+    lastName: 'Pulhoster',
+    email: 'teacher@teacher.com',
+    password: process.env.ADMIN_USER_PWD,
+    isAdmin: false,
+    parentTeacher: 'teacher'
+  });
 
   db.Parent.bulkCreate(parentDataJSON).then(function () {
     return db.Approved.bulkCreate(approvedDataJSON);

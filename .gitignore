@@ -2,3 +2,7 @@
 node_modules
 npm-debug.log
 .env
+BACKUP-server.js
+HEROKU-package.json
+HEROKU-server.js
+views/partials/modal/TEST-add_parent.handlebars

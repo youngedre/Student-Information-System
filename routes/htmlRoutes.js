@@ -120,6 +120,7 @@ module.exports = (db) => {
   // });
 
   // Load teacher page
+
   router.get('/teacher/:id?', (req, res) => {
     if (req.params.id) {
       var id = req.params.id;
