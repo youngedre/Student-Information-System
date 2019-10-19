@@ -531,11 +531,11 @@ background: #FFFDF5!important;
   }
 
   .title-tab-blue> a:focus, .title-tab-blue > a[aria-selected='true']{
-    background-color: #71960C; 
+    background-color: #45BED2;  
   }
 
   .title-tab-blue> a:hover, .title-tab-blue > a[aria-selected='true']{
-    background-color: #71960C; 
+    background-color: #45BED2; 
     color: #FFFDF5; 
   }
 
