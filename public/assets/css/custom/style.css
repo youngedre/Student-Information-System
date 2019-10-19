@@ -526,7 +526,8 @@ background: #FFFDF5!important;
   .title-tab-blue > a {
     background-color: #45BED2; 
     color: #FFFDF5; 
-    font-weight: bold;
+    font-weight: 600;
+
     border: none; 
   }
 
@@ -539,30 +540,79 @@ background: #FFFDF5!important;
     color: #FFFDF5; 
   }
 
-  .title-tab-green > a {
-    background-color: #71960C; 
+  .title-tab-orange> a:focus, .title-tab-orange > a[aria-selected='true']{
+    background-color: #F28808;  
+  }
+
+  .title-tab-orange> a:hover, .title-tab-orange > a[aria-selected='true']{
+    background-color: #F28808; 
+    color: #FFFDF5; 
+  }
+
+  .title-tab-red> a:focus, .title-tab-red > a[aria-selected='true']{
+    background-color: #CC5621;  
+  }
+
+  .title-tab-red> a:hover, .title-tab-red > a[aria-selected='true']{
+    background-color: #CC5621; 
+    color: #FFFDF5; 
+  }
+  .title-tab-purple> a:focus, .title-tab-purple > a[aria-selected='true']{
+    background-color: #63476A;  
+  }
+
+  .title-tab-purple> a:hover, .title-tab-purple > a[aria-selected='true']{
+    background-color: #63476A; 
+    color: #FFFDF5; 
+  }
+
+  .title-tab-green > a, .title-tab-blue > a, .title-tab-orange > a, .title-tab-red > a, .title-tab-purple > a   {
     border: none;
     color: #FFFDF5; 
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .title-tab-green > a {
+    background-color: #71960C; 
+  }
+  .title-tab-blue > a {
+    background-color: #45BED2; 
+  }
+  .title-tab-orange > a {
+    background-color: #F28808; 
+  }
+  .title-tab-red > a {
+    background-color: #CC5621; 
+  }
+  .title-tab-purple > a {
+    background-color: #63476A; 
   }
 
   .title-tab-green> a:focus, .title-tab-green > a[aria-selected='true']{
     background-color: #71960C; 
   }
+  .tabs-title > a[aria-selected='true'] {
+    color: #FFFDF5; 
+    font-weight: bold; 
+  }
+ 
 
-  .title-tab-green> a:hover, .title-tab-green > a[aria-selected='true']{
+  .title-tab-green> a:hover, .title-tab-blue> a:hover, .title-tab-orange> a:hover, .title-tab-red> a:hover, .title-tab-purple> a:hover {
     background-color: #F7CD1C; 
     color: #FFFDF5; 
+    font-weight: 600; 
   }
   .tabs-content> #parent1 {
     /* border: 2px solid  #71960C;  */
     background-color: #71960C; 
     
     border: none;
-
-    
-    /* background-color: #FFFDF5; */
   }
+  .tabs-content> #parent2 {
+    background-color: #45BED2; 
+    color: #FFFDF5; 
+  }
+  
 
 .tabs-content {
   border: none;
@@ -573,4 +623,18 @@ background: #FFFDF5!important;
   font-weight: bold; 
 }
 
+input {
+  background-color: #FFFDF5!important;
+}
 
+
+.panel-buttons {
+  background-color: #F7CD1C;  
+  color: #FFFDF5;
+  font-weight: 600; 
+}
+
+.panel-buttons:hover {
+  background-color: #FFFDF5; 
+color: #F7CD1C; 
+}
