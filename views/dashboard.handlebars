@@ -1,51 +1,30 @@
 {{> nav/nav-block}}
 
-{{!-- <div id="main-container" class="container">
-  <div class="jumbotron text-center header-wrap" align="center">
-    <p class="lead">Welcome to <strong>Sample App</strong></p>
-    <hr class="my-4">
-    <div>
-      {{#if isloggedin}}
-        You are logged in as {{user.firstName}}
-        <a href="/logout"> <button type="btn" class="btn">Logout</button></a>
-      {{else}}
-        <p>You need to log in to use this app.</p>
-      {{/if}}
-      <h5 id="login-err-msg"></h5>
-    </div>
-  </div>
-</div>  --}}
+
 
 <!-- Landing Page -->
 <section style="background-color: #F7CD1C">
-  {{!-- <img src="/static-files/assets/images/characters/s_i_s_character.png" style="width: 20%; z-index:1; left: 240px; position: absolute;"> --}}
-  {{!-- <div style="background-image: url('/static-files/assets/images/background.png'); "> --}}
-  {{!-- <div  id="intro-background" style="margin-top: 182px; background-color: #FFFDF5; height: 50vh; width: 100%; border-top: 3px solid #F28808; border-bottom: 3px solid #F28808; display:table; position: absolute; z-index: 0; --}}
-  {{!-- vertical-align: middle;"> --}}
-    <div class="grid-container" style="margin-top: 4vh;">
-      <div class="grid-x grid-padding-x">
-        <!-- Login Box -->
-        <div class="login-box align-self-middle">
-          <div class="grid-x grid-padding-x text-center">
-            
-            <div class="large-6 medium-6 cell" data-magellan data-options="animationEasing: linear; animationDuration: 3000">
-              <img style="margin-top: 7vh" src="/static-files/assets/images/logos/s_i_s_logo_orange.png">
+ {{!-- <section >  --}}
+          <div class="content" style="background-color:#FFFDF5">
+              <div class="grid-container">
+                <div class="grid-x grid-padding-x text-center align-center">
+                <div class="large-8 cell">
+                  <img src="/static-files/assets/images/s_i_s_svg.png" style="border: 4px solid #F28808"> 
+                </div>
+                <div class="large-4 cell text-center align-bottom" style=>
+                <div class="grid-x grid-padding-x align-bottom">
+                 <h1 style="color: #45BED2; border-bottom: 4px solid #45BED2; margin-top: 12vh;padding-bottom:1vh">Hello!<br></h1> 
+                  <h2 class="" style="color: #F28808; margin-top: 6vh; margin-bottom: 6vh">I'm a Student Information System that makes communication between preschool teachers and parents effortless and efficient.</h2> 
+                  <!-- Login -->
+                  <a id="login-modal" class="login-box-social-button-facebook">Login</a>
+                  <!-- Sign up -->
+                  <a id="register" class="login-box-social-button-twitter">Sign Up</a>
+                 </div>
+                </div>
+                </div>
             </div>
-            <!-- Buttons -->
-            <div style="background-image: none!important" class="large-6 medium-6 cell login-box-social-section" data-magellan data-options="animationEasing: linear; animationDuration: 3000;">
-              <div class="login-box-social-section-inner">
-                <span class="login-box-social-headline"style="color:#F28808">Hi, I'm S-I-S! A Student information system that makes communication between preschool teachers and parents effortless and efficient.   </span>
-                <!-- Login -->
-                <a id="login-modal" class="login-box-social-button-facebook">Login</a>
-                <!-- Sign up -->
-                <a id="register" class="login-box-social-button-twitter">Sign Up</a>
-              </div>  
-            </div>
-          
           </div>
-        </div>
-      </div>
-    </div>
+  
 </section>
  
 <!-- About S.I.S on landing page scroll -->  
@@ -60,7 +39,7 @@
         <!-- Description: Communication --> 
         <div class="cell large-6 " style="height: 60vh">
           <div class="grid-x grid-padding-x align-center text-center" style="box-shadow: 0 4px 8px 0 rgba(252, 119, 11, 0.548), 0 6px 20px 0 rgba(252, 119, 11, 0.548);background-color: #F28808; height: 80px; border-radius: 29px; width: 240px; height: 240px; margin: 0 auto; margin-bottom: 1vh">
-            <h4 style="padding: 2vh;color: #FFFDF5;">COMMUNICATION</h4>
+            <h4 id="communication" style="padding: 2vh;color: #FFFDF5;">COMMUNICATION</h4>
             <p style="font-weight: 600; border-top: 1px solid #FFFDF5; color: #FFFDF5; margin-top: -4vh; margin-left: 1vh; margin-right: 1vh; padding: 1vh; letter-spacing: 1px">Strengthen the bond between parents and teachers by allowing fast, efficient digital communication.</p>
           </div>
           <div class="grid-x grid-padding-x align-bottom text-center" style="color: #FFFDF5;">

@@ -31,8 +31,24 @@
     <!-- Splash Page for parent portal -->
     <div id="my-profile" class="grid-container" style="margin-top: 4vh;">
       <div class="grid-x grid-padding-x text-center">
-        <h1>Hi {{parentData.firstName}} {{parentData.lastName}}! <br> </h1>
-        <a class="button" style="margin: 0 auto" data-toggle="offCanvasLeft1">Click me to view the dashboard</a>
+       
+        <section > 
+          <div class="content">
+              <div class="grid-container">
+                <div class="grid-x grid-padding-x text-center">
+                <div class="large-6 cell">
+                  <img src="/static-files/assets/images/characters/s_i_s_character_3.png"> 
+                </div>
+                <div class="large-6 cell text-center">
+                 <h1 style="color: #F28808; border-bottom: 1px solid #45BED2; padding-bottom:1vh">Hi {{parentData.firstName}} {{parentData.lastName}}! <br> </h1>
+                 <h3 style="padding: 2vh; color: #707070"> I'm excited to help you get set up for preschool! Please visit the dashboard and complete the parent details and child details sections to get started. </h3>
+                <a class="button start" style="margin: 0 auto; background-color: #F28808" data-toggle="offCanvasLeft1">Click me to view the dashboard</a>
+                </div>
+                </div>
+            </div>
+          </div>
+        </section>
+        
       </div>
     </div>
 
